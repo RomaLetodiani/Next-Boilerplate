@@ -1,4 +1,10 @@
-import { Calendar, Camera, Mail, MapPin, Shield } from "lucide-react";
+import { ActivityFeed } from "@/components/profile/activity-feed";
+import { Availability } from "@/components/profile/availability";
+import { ContactInfo } from "@/components/profile/contact-info";
+import { ProjectsGrid } from "@/components/profile/projects-grid";
+import { SkillsSection } from "@/components/profile/skills-section";
+import { TeamMembers } from "@/components/profile/team-members";
+import { Camera } from "lucide-react";
 
 const ProfilePage = () => {
   return (
@@ -32,75 +38,16 @@ const ProfilePage = () => {
         </div>
       </div>
 
-      <div className="grid gap-8 md:grid-cols-3">
-        {/* Profile Info */}
-        <div className="md:col-span-2 space-y-8">
-          <div className="rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800">
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Profile Details</h2>
-            <div className="mt-6 space-y-6">
-              <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-gray-400" />
-                <div>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
-                  <p className="text-sm font-medium text-gray-900 dark:text-white">
-                    john.doe@example.com
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-gray-400" />
-                <div>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Location</p>
-                  <p className="text-sm font-medium text-gray-900 dark:text-white">
-                    San Francisco, CA
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Calendar className="h-5 w-5 text-gray-400" />
-                <div>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Joined</p>
-                  <p className="text-sm font-medium text-gray-900 dark:text-white">
-                    January 1, 2024
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800">
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white">About</h2>
-            <p className="mt-4 text-gray-600 dark:text-gray-300">
-              Full-stack developer with a passion for building beautiful and functional web
-              applications. Experienced in React, Node.js, and TypeScript.
-            </p>
-          </div>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="lg:col-span-2 space-y-8">
+          <ActivityFeed />
+          <ProjectsGrid />
+          <SkillsSection />
         </div>
-
-        {/* Side Section */}
         <div className="space-y-8">
-          <div className="rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800">
-            <h2 className="flex items-center space-x-2 text-lg font-semibold text-gray-900 dark:text-white">
-              <Shield className="h-5 w-5" />
-              <span>Account Status</span>
-            </h2>
-            <div className="mt-4 space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-500 dark:text-gray-400">Email verified</span>
-                <span className="flex items-center space-x-1 text-sm font-medium text-emerald-600">
-                  <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                  <span>Verified</span>
-                </span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-500 dark:text-gray-400">2FA enabled</span>
-                <span className="flex items-center space-x-1 text-sm font-medium text-amber-600">
-                  <span className="h-2 w-2 rounded-full bg-amber-500" />
-                  <span>Disabled</span>
-                </span>
-              </div>
-            </div>
-          </div>
+          <ContactInfo />
+          <TeamMembers />
+          <Availability />
         </div>
       </div>
     </div>
