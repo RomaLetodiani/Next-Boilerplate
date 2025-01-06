@@ -168,7 +168,7 @@ const techFeatures = [
   {
     icon: Zap,
     title: "Server Components",
-    description: "Optimized rendering with React Server Components for better performance",
+    description: "Optimized rendering for better performance",
   },
   {
     icon: Database,
