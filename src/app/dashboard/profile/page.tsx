@@ -1,9 +1,9 @@
-import { ActivityFeed } from "@/components/profile/activity-feed";
-import { Availability } from "@/components/profile/availability";
-import { ContactInfo } from "@/components/profile/contact-info";
-import { ProjectsGrid } from "@/components/profile/projects-grid";
-import { SkillsSection } from "@/components/profile/skills-section";
-import { TeamMembers } from "@/components/profile/team-members";
+import { ActivityFeed } from "@/components/dashboard/profile/activity-feed";
+import { Availability } from "@/components/dashboard/profile/availability";
+import { ContactInfo } from "@/components/dashboard/profile/contact-info";
+import { ProjectsGrid } from "@/components/dashboard/profile/projects-grid";
+import { SkillsSection } from "@/components/dashboard/profile/skills-section";
+import { TeamMembers } from "@/components/dashboard/profile/team-members";
 import { Camera } from "lucide-react";
 
 const ProfilePage = () => {
