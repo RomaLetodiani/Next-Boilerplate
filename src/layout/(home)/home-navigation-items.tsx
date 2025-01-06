@@ -1,5 +1,6 @@
 import {
   BarChart,
+  Book,
   CircleDollarSign,
   HelpCircle,
   Home,
@@ -28,6 +29,7 @@ export const homeNavigationItems = [
   },
   { name: "About", href: "/about", icon: <Info /> },
   { name: "Contact", href: "/contact", icon: <User /> },
+  { name: "Docs", href: "/docs", icon: <Book /> },
   { name: "Help", href: "/help", icon: <HelpCircle /> },
   { name: "Pricing", href: "/pricing", icon: <BarChart /> },
   { name: "Status", href: "/status", icon: <CircleDollarSign /> },

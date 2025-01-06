@@ -43,7 +43,7 @@ export const HomeHero = () => (
         <div className="relative rounded-xl border border-gray-200 bg-white/50 p-4 shadow-xl backdrop-blur-sm dark:border-gray-700 dark:bg-gray-800/50">
           {/* Add a code preview or screenshot here */}
           <div className="aspect-video rounded-lg bg-gray-100 dark:bg-gray-700">
-            <Image src={hero} alt="Home Hero" />
+            <Image priority src={hero} alt="Home Hero" />
           </div>
         </div>
       </div>
