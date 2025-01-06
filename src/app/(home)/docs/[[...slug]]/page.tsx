@@ -87,7 +87,7 @@ const DocsPage = () => (
           </header>
 
           {/* Example Content */}
-          <section className="space-y-6">
+          <section className="space-y-6 text-gray-900 dark:text-white">
             <h2>Overview</h2>
             <p>
               Our platform provides a comprehensive solution for building modern web applications.

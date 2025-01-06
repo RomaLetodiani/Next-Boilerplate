@@ -68,13 +68,19 @@ export const LoginForm = () => (
         {/* Terms and Privacy */}
         <p className="mt-6 text-center text-xs text-gray-500 dark:text-gray-400">
           By signing in, you agree to our{" "}
-          <a href="#" className="text-indigo-600 hover:text-indigo-500 dark:text-indigo-400">
+          <Link
+            href="/legal/terms"
+            className="text-indigo-600 hover:text-indigo-500 dark:text-indigo-400"
+          >
             Terms of Service
-          </a>{" "}
+          </Link>{" "}
           and{" "}
-          <a href="#" className="text-indigo-600 hover:text-indigo-500 dark:text-indigo-400">
+          <Link
+            href="/legal/privacy"
+            className="text-indigo-600 hover:text-indigo-500 dark:text-indigo-400"
+          >
             Privacy Policy
-          </a>
+          </Link>
         </p>
       </div>
 
@@ -82,9 +88,12 @@ export const LoginForm = () => (
       <div className="mt-8 text-center">
         <p className="text-sm text-gray-500 dark:text-gray-400">
           Need help?{" "}
-          <a href="#" className="text-indigo-600 hover:text-indigo-500 dark:text-indigo-400">
+          <Link
+            href="/contact"
+            className="text-indigo-600 hover:text-indigo-500 dark:text-indigo-400"
+          >
             Contact support
-          </a>
+          </Link>
         </p>
       </div>
     </div>

@@ -53,7 +53,7 @@ const PricingPage = () => (
               </ul>
 
               <Link
-                href={plan.highlighted ? "/auth/register" : "/contact"}
+                href={plan.highlighted ? "/login" : "/contact"}
                 className={`mt-8 block w-full rounded-lg px-4 py-2.5 text-center text-sm font-semibold transition-colors ${
                   plan.highlighted
                     ? "bg-indigo-600 text-white hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
