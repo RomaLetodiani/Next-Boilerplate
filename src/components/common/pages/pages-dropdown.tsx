@@ -1,6 +1,6 @@
-import { NavItem } from "@/types/nav.types";
+import { type NavItem } from "@/types/nav.types";
 import { ChevronDown } from "lucide-react";
-import Link from "next/link";
+import { PageNavItem } from "./pages-nav-item";
 
 type PagesDropdownProps = {
   navigationItems: NavItem[];
@@ -40,25 +40,17 @@ export const PagesDropdown = ({ navigationItems }: PagesDropdownProps) => (
 
                 <div className="ml-8 border-l border-gray-200 pl-1 dark:border-gray-700">
                   {section.subNavItems.map((item) => (
-                    <Link
+                    <PageNavItem
                       key={item.name}
                       href={item.href}
-                      className="flex items-center space-x-2 rounded-lg px-3 py-2 text-sm text-gray-600 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700/50"
-                    >
-                      <span className="text-gray-400">{item.icon}</span>
-                      <span>{item.name}</span>
-                    </Link>
+                      icon={item.icon}
+                      name={item.name}
+                    />
                   ))}
                 </div>
               </div>
             ) : (
-              <Link
-                href={section.href}
-                className="flex items-center space-x-2 rounded-lg px-3 py-2 text-sm text-gray-600 transition-colors hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700/50"
-              >
-                <span className="text-gray-400">{section.icon}</span>
-                <span>{section.name}</span>
-              </Link>
+              <PageNavItem href={section.href} icon={section.icon} name={section.name} />
             )}
           </div>
         ))}
