@@ -13,9 +13,7 @@ const SignIn = async () => {
       <div className="max-w-md w-full">
         {/* Logo */}
         <div className="flex justify-center mb-8">
-          <div className="w-20 h-20 relative">
-            <Image src="/vercel.svg" alt="Logo" fill className="object-contain" priority />
-          </div>
+          <p className="bg-white dark:bg-gray-800 px-4 py-2 rounded-lg shadow-md">Next JS</p>
         </div>
 
         {/* Sign in card */}
