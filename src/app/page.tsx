@@ -1,6 +1,12 @@
+import ThemeToggle from "@/components/common/theme-toggle";
+
 const HomePage = async () => {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+      {/* Theme Toggle */}
+      <div className="absolute top-4 right-4">
+        <ThemeToggle />
+      </div>
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16 sm:py-24">
         <div className="text-center">
@@ -58,19 +64,30 @@ const features = [
       "Built with the latest version of Next.js for optimal performance and developer experience.",
   },
   {
+    icon: "🚀",
+    title: "React 19",
+    description:
+      "Built with the latest version of React for optimal performance and developer experience.",
+  },
+  {
     icon: "🎨",
     title: "Tailwind CSS",
     description: "Fully customizable design system with utility-first CSS framework.",
   },
   {
-    icon: "🔒",
-    title: "Authentication",
-    description: "Secure authentication system with role-based access control.",
-  },
-  {
     icon: "📱",
     title: "Responsive Design",
     description: "Fully responsive layout that works seamlessly across all devices.",
+  },
+  {
+    icon: "🎨",
+    title: "Theme support",
+    description: "Fully c ustomizable design system with utility-first CSS framework.",
+  },
+  {
+    icon: "🔒",
+    title: "Authentication",
+    description: "Secure authentication system with role-based access control.",
   },
   {
     icon: "⚡",
