@@ -108,9 +108,6 @@ const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
                 <Bell className="h-6 w-6" />
               </button>
 
-              {/* Theme Toggle */}
-              <ThemeToggle />
-
               {/* Profile dropdown */}
               <div className="relative">
                 <button className="flex items-center rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:bg-gray-800">
@@ -122,6 +119,9 @@ const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
                   </div>
                 </button>
               </div>
+
+              {/* Theme Toggle */}
+              <ThemeToggle />
             </div>
           </div>
         </header>
