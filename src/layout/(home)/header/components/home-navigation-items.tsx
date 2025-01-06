@@ -1,3 +1,5 @@
+import { authNavigationItems } from "@/layout/(auth)/auth-navigation-items";
+import { dashboardNavigationItems } from "@/layout/dashboard/dashboard-navigation-items";
 import {
   BarChart,
   Book,
@@ -14,9 +16,7 @@ import {
   ShieldCheck,
   User,
 } from "lucide-react";
-import { authNavigationItems } from "../../(auth)/auth-navigation-items";
-import { dashboardNavigationItems } from "../../dashboard/dashboard-navigation-items";
-import { legalNavigationItems } from "../pages/legal/legal-navigation-items";
+import { legalNavigationItems } from "../../pages/legal/legal-navigation-items";
 
 export const companyNavigationItems = [
   { name: "Home", href: "/", icon: <Home /> },

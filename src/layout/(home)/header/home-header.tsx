@@ -2,9 +2,9 @@ import { PagesDropdown } from "@/components/common/pages/pages-dropdown";
 import { ThemeToggle } from "@/components/common/theme-toggle";
 import { SidebarToggle } from "@/layout/sidebar/sidebar-toggle";
 import HomeLogo from "../home-logo";
-import { homeNavigationItems } from "./home-navigation-items";
-import { HomeSections } from "./home-sections";
-import { HomeSidebar } from "./home-sidebar";
+import { homeNavigationItems } from "./components/home-navigation-items";
+import { HomeSections } from "./components/home-sections";
+import { HomeSidebar } from "./components/home-sidebar";
 
 export const HomeHeader = () => (
   <>

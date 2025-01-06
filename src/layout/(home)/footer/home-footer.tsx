@@ -1,4 +1,7 @@
-import { companyNavigationItems, productNavigationItems } from "../header/home-navigation-items";
+import {
+  companyNavigationItems,
+  productNavigationItems,
+} from "../header/components/home-navigation-items";
 import { legalNavigationItems } from "../pages/legal/legal-navigation-items";
 import { HomeFooterBottom } from "./components/home-footer-bottom";
 import { HomeFooterGridWrapper } from "./components/home-footer-grid-wrapper";

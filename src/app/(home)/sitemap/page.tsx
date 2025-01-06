@@ -2,7 +2,7 @@ import { authNavigationItems } from "@/layout/(auth)/auth-navigation-items";
 import {
   companyNavigationItems,
   productNavigationItems,
-} from "@/layout/(home)/header/home-navigation-items";
+} from "@/layout/(home)/header/components/home-navigation-items";
 import { legalNavigationItems } from "@/layout/(home)/pages/legal/legal-navigation-items";
 import { dashboardNavigationItems } from "@/layout/dashboard/dashboard-navigation-items";
 import { HelpCircle, Home, LayoutDashboard, Shield, Users } from "lucide-react";

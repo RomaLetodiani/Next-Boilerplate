@@ -73,14 +73,14 @@ const PrivacyPage = () => (
         <h3 className="text-sm font-semibold text-gray-900 dark:text-white">On this page</h3>
         <nav className="mt-4 space-y-2">
           {sections.map((section) => (
-            <a
+            <Link
               key={section.title}
               href={`#${section.title.toLowerCase().replace(/\s+/g, "-")}`}
               className="group flex items-center space-x-2 rounded-lg px-3 py-2 text-sm text-gray-600 transition-colors hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white"
             >
               <ChevronRight className="h-4 w-4 text-gray-400 transition-transform group-hover:translate-x-0.5 dark:text-gray-500" />
               <span>{section.title}</span>
-            </a>
+            </Link>
           ))}
         </nav>
 

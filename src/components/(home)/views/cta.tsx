@@ -18,12 +18,12 @@ export const CTA = () => (
           >
             Start Building Now
           </Link>
-          <a
-            href="#features"
+          <Link
+            href="/about"
             className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-8 py-3 text-base font-medium text-white backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white/20"
           >
             Learn More
-          </a>
+          </Link>
         </div>
       </div>
     </div>

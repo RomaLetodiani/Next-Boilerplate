@@ -1,4 +1,5 @@
 import { Mail, MapPin, MessageSquare, Phone, Send } from "lucide-react";
+import Link from "next/link";
 
 const ContactPage = () => (
   <>
@@ -61,13 +62,13 @@ const ContactPage = () => (
                 {item.title}
               </h3>
               <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{item.description}</p>
-              <a
+              <Link
                 href={item.link}
                 className="mt-4 inline-flex items-center space-x-2 text-sm font-medium text-indigo-600 transition-colors hover:text-indigo-500 dark:text-indigo-400"
               >
                 <span>{item.action}</span>
                 <Send className="h-4 w-4" />
-              </a>
+              </Link>
             </div>
           </div>
         ))}
