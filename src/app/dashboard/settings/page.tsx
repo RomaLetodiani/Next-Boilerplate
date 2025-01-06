@@ -81,23 +81,6 @@ const SettingsPage = () => {
                   </p>
                 </div>
               </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="relative flex h-6 items-center">
-                  <input
-                    type="checkbox"
-                    className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-700"
-                  />
-                </div>
-                <div className="flex-1">
-                  <label className="text-sm font-medium text-gray-900 dark:text-white">
-                    Marketing Emails
-                  </label>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Receive emails about new features and updates
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
 
