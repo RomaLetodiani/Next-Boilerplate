@@ -9,6 +9,7 @@ import {
   Info,
   Layout,
   LockKeyhole,
+  Search,
   ShieldCheck,
   User,
 } from "lucide-react";
@@ -27,6 +28,7 @@ export const companyNavigationItems = [
 export const productNavigationItems = [
   { name: "Docs", href: "/docs", icon: <Book /> },
   { name: "Help", href: "/help", icon: <HelpCircle /> },
+  { name: "Search", href: "/search", icon: <Search /> },
   { name: "Status", href: "/status", icon: <CircleDollarSign /> },
   { name: "Resources", href: "/resources", icon: <BookHeart /> },
   { name: "Changelog", href: "/changelog", icon: <BookCheck /> },
