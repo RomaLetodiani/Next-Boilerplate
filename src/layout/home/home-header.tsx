@@ -1,11 +1,12 @@
 import { SidebarToggle } from "@/layout/sidebar-toggle";
 import Link from "next/link";
 import { HomeSidebar } from "./home-sidebar";
+import { PagesDropdown } from "./pages-dropdown";
 
 export const HomeHeader = () => (
   <>
     <HomeSidebar />
-    <header className="fixed top-0 left-0 right-0 z-40 border-b border-gray-200 bg-white/80 backdrop-blur-sm dark:border-gray-700 dark:bg-gray-800/80">
+    <header className="sticky top-0 z-40 border-b border-gray-200 bg-white/80 backdrop-blur-sm dark:border-gray-700 dark:bg-gray-800/80">
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
@@ -28,25 +29,22 @@ export const HomeHeader = () => (
         </Link>
 
         {/* Navigation */}
-        <div className="hidden items-center space-x-8 md:flex">
-          <Link
-            href="#features"
-            className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
-          >
-            Features
-          </Link>
-          <Link
-            href="#pricing"
-            className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
-          >
-            Pricing
-          </Link>
-          <Link
-            href="/dashboard"
-            className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
-          >
-            Dashboard
-          </Link>
+        <div className="flex items-center space-x-8">
+          <div className="hidden items-center space-x-8 md:flex">
+            <Link
+              href="#features"
+              className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+            >
+              Features
+            </Link>
+            <Link
+              href="#pricing"
+              className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+            >
+              Pricing
+            </Link>
+            <PagesDropdown />
+          </div>
           <SidebarToggle />
         </div>
       </nav>
