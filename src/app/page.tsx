@@ -114,7 +114,7 @@ const HomePage = async () => {
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="rounded-lg bg-white p-6 shadow-lg dark:bg-gray-800">
-                <p className="text-gray-600 dark:text-gray-300">"{testimonial.quote}"</p>
+                <p className="text-gray-600 dark:text-gray-300">&quot;{testimonial.quote}&quot;</p>
                 <div className="mt-4 flex items-center">
                   <div className="h-10 w-10 rounded-full bg-gray-200 dark:bg-gray-700"></div>
                   <div className="ml-3">

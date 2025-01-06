@@ -143,7 +143,7 @@ const DashboardPage = () => {
         <div className="relative z-10">
           <h1 className="text-3xl font-bold">Welcome back, User! 👋</h1>
           <p className="mt-2 max-w-2xl text-indigo-100">
-            Here's what's happening with your projects today.
+            Here&apos;s what&apos;s happening with your projects today.
           </p>
         </div>
         <div className="absolute inset-0 bg-grid-modern " />

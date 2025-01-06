@@ -124,7 +124,7 @@ const SettingsPage = () => {
                     Show Activity Status
                   </label>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Let others see when you're active
+                    Let others see when you&apos;re active
                   </p>
                 </div>
               </div>
