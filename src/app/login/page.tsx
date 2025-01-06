@@ -1,4 +1,4 @@
-import { auth, signIn } from "@/lib/auth";
+import { auth } from "@/lib/auth";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 
@@ -50,7 +50,7 @@ const SignIn = async () => {
               <form
                 action={async () => {
                   "use server";
-                  await signIn("google", { redirectTo: "/dashboard" });
+                  redirect("/dashboard");
                 }}
                 className="mt-8"
               >
@@ -166,7 +166,7 @@ const SignIn = async () => {
 
             {/* Background decoration */}
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/90 to-purple-600/90" />
-            <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+            <div className="absolute inset-0 bg-grid-modern" />
           </div>
         </div>
       </div>

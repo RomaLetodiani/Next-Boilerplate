@@ -146,7 +146,7 @@ const DashboardPage = () => {
             Here's what's happening with your projects today.
           </p>
         </div>
-        <div className="absolute right-0 top-0 h-full w-full bg-[url('/grid.svg')] opacity-10" />
+        <div className="absolute inset-0 bg-grid-modern " />
       </div>
 
       {/* Stats Grid */}
