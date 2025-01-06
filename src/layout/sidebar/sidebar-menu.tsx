@@ -5,7 +5,7 @@ import { SIDEBAR_ID } from "@/utils/const";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 type SidebarMenuProps = {
@@ -16,6 +16,13 @@ type SidebarMenuProps = {
 export const SidebarMenu = ({ navigation, shouldCloseOnClick = false }: SidebarMenuProps) => {
   const pathname = usePathname();
   const [openSections, setOpenSections] = useState<string[]>([]);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   const toggleSection = (name: string) => {
     setOpenSections((prev) =>
