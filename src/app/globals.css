@@ -19,3 +19,20 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* This styles the main scrollbar container */
+::-webkit-scrollbar {
+  width: 6px; /* width of the entire scrollbar */
+  height: 4px; /* width of the entire scrollbar */
+}
+
+/* This styles the scrollbar track (the part the thumb slides within) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* color of the tracking area */
+}
+
+/* This styles the scrollbar thumb (the draggable element) */
+::-webkit-scrollbar-thumb {
+  background: #696767; /* color of the thumb */
+  transition: all 0.5s;
+}
