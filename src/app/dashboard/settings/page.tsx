@@ -1,6 +1,52 @@
+"use client";
+
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Bell, Globe, Key, Palette, Shield } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
+import { z } from "zod";
+
+const settingsSchema = z.object({
+  emailNotifications: z.boolean().default(true),
+  pushNotifications: z.boolean().default(true),
+  publicProfile: z.boolean().default(false),
+  activityStatus: z.boolean().default(true),
+});
+
+type Settings = z.infer<typeof settingsSchema>;
 
 const SettingsPage = () => {
+  const form = useForm<Settings>({
+    resolver: zodResolver(settingsSchema),
+    defaultValues: {
+      emailNotifications: true,
+      pushNotifications: true,
+      publicProfile: false,
+      activityStatus: true,
+    },
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { isDirty },
+  } = form;
+
+  const updateSettings = async (data: Settings) => {
+    toast.promise(
+      async () => {
+        // Simulate API call
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        console.log("Settings updated:", data);
+      },
+      {
+        loading: "Updating settings...",
+        success: "Settings updated successfully!",
+        error: "Failed to update settings",
+      },
+    );
+  };
+
   return (
     <div className="mx-auto max-w-4xl space-y-8">
       <div className="rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800">
@@ -35,7 +81,7 @@ const SettingsPage = () => {
         </div>
 
         {/* Settings Content */}
-        <div className="md:col-span-2 space-y-8">
+        <form onSubmit={handleSubmit(updateSettings)} className="md:col-span-2 space-y-8">
           {/* Notifications Section */}
           <div className="rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -50,8 +96,8 @@ const SettingsPage = () => {
                 <div className="relative flex h-6 items-center">
                   <input
                     type="checkbox"
+                    {...register("emailNotifications")}
                     className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-700"
-                    defaultChecked
                   />
                 </div>
                 <div className="flex-1">
@@ -68,8 +114,8 @@ const SettingsPage = () => {
                 <div className="relative flex h-6 items-center">
                   <input
                     type="checkbox"
+                    {...register("pushNotifications")}
                     className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-700"
-                    defaultChecked
                   />
                 </div>
                 <div className="flex-1">
@@ -98,6 +144,7 @@ const SettingsPage = () => {
                 <div className="relative flex h-6 items-center">
                   <input
                     type="checkbox"
+                    {...register("publicProfile")}
                     className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-700"
                   />
                 </div>
@@ -115,8 +162,8 @@ const SettingsPage = () => {
                 <div className="relative flex h-6 items-center">
                   <input
                     type="checkbox"
+                    {...register("activityStatus")}
                     className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-700"
-                    defaultChecked
                   />
                 </div>
                 <div className="flex-1">
@@ -133,11 +180,19 @@ const SettingsPage = () => {
 
           {/* Save Button */}
           <div className="flex justify-end">
-            <button className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600">
+            <button
+              type="submit"
+              disabled={!isDirty}
+              className={`rounded-lg px-4 py-2 text-sm font-medium text-white transition-colors ${
+                isDirty
+                  ? "bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
+                  : "cursor-not-allowed bg-gray-400 dark:bg-gray-600"
+              }`}
+            >
               Save Changes
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );
