@@ -16,8 +16,6 @@ export default {
       },
       backgroundImage: {
         grid: "url('/grid.svg')",
-        "grid-dots": "url('/grid-dots.svg')",
-        "grid-modern": "url('/grid-modern.svg')",
       },
     },
   },

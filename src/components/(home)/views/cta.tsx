@@ -3,7 +3,7 @@ import Link from "next/link";
 export const CTA = () => (
   <section id="cta" className="container mx-auto px-4 py-24">
     <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-indigo-500 to-purple-600 px-6 py-20 shadow-xl sm:px-12">
-      <div className="absolute inset-0 bg-grid-modern opacity-10" />
+      <div className="absolute inset-0 bg-grid opacity-20 dark:opacity-40" />
       <div className="relative mx-auto max-w-3xl text-center">
         <h2 className="bg-gradient-to-r from-white to-indigo-100 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl">
           Ready to get started?

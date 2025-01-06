@@ -60,7 +60,7 @@ const sections: SitemapSection[] = [
 const SitemapPage = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
-      <div className="absolute inset-0 bg-grid-modern opacity-[0.02] dark:opacity-[0.05]" />
+      <div className="absolute inset-0 bg-grid opacity-30 dark:opacity-80" />
       <div className="relative">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           {/* Header */}
@@ -76,7 +76,7 @@ const SitemapPage = () => {
                 Quick access to all pages and resources across our platform
               </p>
             </div>
-            <div className="absolute inset-0 bg-grid-modern opacity-10" />
+            <div className="absolute inset-0 bg-grid opacity-20 dark:opacity-40" />
           </div>
 
           {/* Sections */}
@@ -91,7 +91,7 @@ const SitemapPage = () => {
 
                 <div className="relative">
                   {/* Section Header */}
-                  <div className="flex items-center space-x-3">
+                  <div className="flex items-start space-x-3">
                     <div className="rounded-lg bg-indigo-50 p-2 text-indigo-600 dark:bg-indigo-900/50 dark:text-indigo-400">
                       <section.icon className="h-6 w-6" />
                     </div>
@@ -148,7 +148,7 @@ const SitemapPage = () => {
                 Search Now
               </Link>
             </div>
-            <div className="absolute inset-0 bg-grid-modern opacity-10" />
+            <div className="absolute inset-0 bg-grid opacity-20 dark:opacity-40" />
           </div>
         </div>
       </div>

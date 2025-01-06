@@ -37,7 +37,7 @@ const DashboardPage = () => (
           Here's what's happening with your projects today.
         </p>
       </div>
-      <div className="absolute inset-0 bg-grid-modern" />
+      <div className="absolute inset-0 bg-grid opacity-20 dark:opacity-40" />
     </div>
 
     {/* Your Dashboard Content... */}

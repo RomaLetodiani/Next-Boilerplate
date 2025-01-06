@@ -160,7 +160,7 @@ const ContactPage = () => (
         <div className="space-y-8">
           <div className="overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 p-8 text-white shadow-lg">
             <div className="relative">
-              <div className="absolute inset-0 bg-grid-modern opacity-10" />
+              <div className="absolute inset-0 bg-grid opacity-30 dark:opacity-50" />
               <div className="relative">
                 <h2 className="text-xl font-semibold">Visit Our Office</h2>
                 <p className="mt-4 max-w-xl text-indigo-100">

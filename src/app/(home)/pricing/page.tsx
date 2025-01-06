@@ -3,10 +3,10 @@ import { Check } from "lucide-react";
 import Link from "next/link";
 
 const PricingPage = () => (
-  <>
+  <div className="relative">
+    <div className="absolute inset-0 bg-grid h-full opacity-30 dark:opacity-50" />
     {/* Header */}
-    <div className="relative overflow-hidden px-4 pt-16 sm:px-6 lg:px-8">
-      <div className="absolute inset-0 bg-grid-modern opacity-5" />
+    <div className="px-4 pt-16 sm:px-6 lg:px-8">
       <div className="relative mx-auto max-w-7xl text-center">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
           Simple, transparent pricing
@@ -71,16 +71,19 @@ const PricingPage = () => (
     {/* FAQ Section */}
     <div className="mx-auto mt-24 max-w-4xl px-4 pb-16 sm:px-6 lg:px-8">
       <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-        Frequently asked questions
+        Frequently Asked Questions
       </h2>
       <div className="mt-12">
         <dl className="space-y-8">
           {pricingFaqs.map((faq) => (
-            <div key={faq.question} className="rounded-2xl bg-white p-8 shadow-lg dark:bg-gray-800">
-              <dt className="text-lg font-semibold text-gray-900 dark:text-white">
+            <div
+              key={faq.question}
+              className="rounded-lg relative z-10 bg-gray-100 p-6 shadow-md dark:bg-gray-700 transition-transform hover:shadow-xl"
+            >
+              <dt className="text-lg font-semibold text-gray-800 dark:text-gray-200">
                 {faq.question}
               </dt>
-              <dd className="mt-4 text-gray-600 dark:text-gray-300">{faq.answer}</dd>
+              <dd className="mt-2 text-gray-500 dark:text-gray-400">{faq.answer}</dd>
             </div>
           ))}
         </dl>
@@ -92,17 +95,17 @@ const PricingPage = () => (
           Still have questions?
         </h3>
         <p className="mt-4 text-gray-600 dark:text-gray-300">
-          Can&apos;t find the answer you&apos;re looking for? Please chat with our friendly team.
+          Can&apos;t find the answer you&apos;re looking for? Our friendly team is here to help!
         </p>
         <Link
           href="/contact"
-          className="mt-8 inline-flex items-center rounded-lg bg-indigo-600 px-6 py-3 text-white transition-colors hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
+          className="mt-8 relative z-10 inline-flex items-center rounded-lg bg-indigo-600 px-6 py-3 text-white transition-colors hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
         >
           Contact Support
         </Link>
       </div>
     </div>
-  </>
+  </div>
 );
 
 export default PricingPage;

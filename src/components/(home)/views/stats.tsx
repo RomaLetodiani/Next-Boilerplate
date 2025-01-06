@@ -3,7 +3,7 @@ export const Stats = () => (
     id="stats"
     className="relative overflow-hidden border-y border-gray-200 bg-white/50 dark:border-gray-700 dark:bg-gray-800/50"
   >
-    <div className="absolute inset-0 bg-grid-modern opacity-5" />
+    <div className="absolute inset-0 bg-grid opacity-20 dark:opacity-40" />
     <div className="container relative mx-auto px-4 py-16">
       <div className="grid min-[350px]:grid-cols-2 gap-8 md:grid-cols-4">
         {stats.map((stat, index) => (

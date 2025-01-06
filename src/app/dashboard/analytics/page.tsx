@@ -117,7 +117,7 @@ const AnalyticsPage = () => {
             Track your performance and growth with detailed insights
           </p>
         </div>
-        <div className="absolute inset-0 bg-grid-modern" />
+        <div className="absolute inset-0 bg-grid opacity-30 dark:opacity-40" />
       </div>
 
       {/* Stats Grid */}

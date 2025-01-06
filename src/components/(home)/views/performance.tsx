@@ -3,7 +3,7 @@ export const Performance = () => (
     id="performance"
     className="relative overflow-hidden bg-gradient-to-b from-indigo-50 to-white py-24 dark:from-gray-800 dark:to-gray-900"
   >
-    <div className="absolute inset-0 bg-grid-modern opacity-5" />
+    <div className="absolute inset-0 bg-grid opacity-20 dark:opacity-40" />
     <div className="container relative mx-auto px-4">
       <div className="text-center">
         <div className="inline-block rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-600 dark:bg-indigo-900/50 dark:text-indigo-300">

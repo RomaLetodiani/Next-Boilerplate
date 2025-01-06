@@ -115,9 +115,11 @@ const PrivacyPage = () => (
               We care about your privacy and are committed to protecting your personal data. This
               policy explains how we collect, use, and safeguard your information.
             </p>
-            <p className="mt-4 text-center text-sm text-indigo-200">Last updated: March 15, 2024</p>
+            <p className="mt-4 text-center text-sm text-indigo-200">
+              Last updated: January 6, 2025
+            </p>
           </div>
-          <div className="absolute inset-0 bg-grid-modern opacity-10" />
+          <div className="absolute inset-0 bg-grid opacity-30 dark:opacity-50" />
         </div>
 
         {/* Content Sections */}

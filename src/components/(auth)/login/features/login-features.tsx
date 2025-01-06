@@ -47,7 +47,7 @@ export const LoginFeatures = () => (
 
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/90 to-purple-600/90" />
-      <div className="absolute inset-0 bg-grid-modern" />
+      <div className="absolute inset-0 bg-grid opacity-40 dark:opacity-80" />
     </div>
   </div>
 );

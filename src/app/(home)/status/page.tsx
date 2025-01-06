@@ -142,7 +142,7 @@ const StatusPage = () => (
           <p className="mt-2 text-sm text-indigo-100">All systems are operating normally</p>
         </div>
       </div>
-      <div className="absolute inset-0 bg-grid-modern opacity-10" />
+      <div className="absolute inset-0 bg-grid opacity-20 dark:opacity-40" />
     </div>
 
     {/* System Components */}

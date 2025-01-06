@@ -79,7 +79,7 @@ const HelpPage = () => (
           </div>
         </div>
       </div>
-      <div className="absolute inset-0 bg-grid-modern opacity-10" />
+      <div className="absolute inset-0 bg-grid opacity-30 dark:opacity-50" />
     </div>
 
     {/* Popular Articles */}

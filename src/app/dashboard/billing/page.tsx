@@ -80,7 +80,7 @@ const BillingPage = () => (
           Manage your subscription, payment methods, and billing history
         </p>
       </div>
-      <div className="absolute inset-0 bg-grid-modern opacity-10" />
+      <div className="absolute inset-0 bg-grid opacity-20 dark:opacity-40" />
     </div>
 
     {/* Current Plan */}
