@@ -92,7 +92,7 @@ const PricingPage = () => (
           Still have questions?
         </h3>
         <p className="mt-4 text-gray-600 dark:text-gray-300">
-          Can't find the answer you're looking for? Please chat with our friendly team.
+          Can&apos;t find the answer you&apos;re looking for? Please chat with our friendly team.
         </p>
         <Link
           href="/contact"

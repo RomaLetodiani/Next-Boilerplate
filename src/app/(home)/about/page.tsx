@@ -49,7 +49,7 @@ const AboutPage = () => (
             </span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600 dark:text-gray-300">
-            We're building the future of web development with modern tools and frameworks. Our
+            We&apos;re building the future of web development with modern tools and frameworks. Our
             mission is to make development faster, easier, and more enjoyable.
           </p>
         </div>

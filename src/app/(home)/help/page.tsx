@@ -134,7 +134,7 @@ const HelpPage = () => (
       <div className="rounded-xl bg-gray-50 p-8 dark:bg-gray-800/50">
         <div className="text-center">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-            Can't find what you're looking for?
+            Can&apos;t find what you&apos;re looking for?
           </h2>
           <p className="mt-2 text-gray-600 dark:text-gray-300">
             Our support team is always here to help you with any questions.

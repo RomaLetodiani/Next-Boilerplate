@@ -152,7 +152,7 @@ const PrivacyPage = () => (
               Questions About Our Privacy Policy?
             </h2>
             <p className="mt-2 text-gray-600 dark:text-gray-300">
-              If you have any questions about our privacy practices, please don't hesitate to
+              If you have any questions about our privacy practices, please don&apos;t hesitate to
               contact us.
             </p>
             <div className="mt-6 flex justify-center space-x-4">

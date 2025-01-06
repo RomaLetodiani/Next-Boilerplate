@@ -164,7 +164,7 @@ const ContactPage = () => (
               <div className="relative">
                 <h2 className="text-xl font-semibold">Visit Our Office</h2>
                 <p className="mt-4 max-w-xl text-indigo-100">
-                  We'd love to meet in person. Visit us at our office for a coffee and a chat.
+                  We&apos;d love to meet in person. Visit us at our office for a coffee and a chat.
                 </p>
 
                 <div className="mt-8 space-y-6">
