@@ -1,11 +1,12 @@
-import { signOut } from "@/lib/auth";
+// import { signOut } from "@/lib/auth";
 import { LogOut } from "lucide-react";
+import { redirect } from "next/navigation";
 import { Sidebar } from "../sidebar/sidebar";
 import { SidebarMenu } from "../sidebar/sidebar-menu";
 import { dashboardNavigationItems } from "./dashboard-navigation-items";
 
 export const DashboardSidebar = () => (
-  <Sidebar largeScreen direction="left">
+  <Sidebar largeScreenOn direction="left">
     <SidebarMenu navigation={dashboardNavigationItems} />
 
     {/* Bottom section */}
@@ -13,7 +14,8 @@ export const DashboardSidebar = () => (
       <form
         action={async () => {
           "use server";
-          await signOut({ redirectTo: "/" });
+          redirect("/");
+          // await signOut({ redirectTo: "/" });
         }}
       >
         <button

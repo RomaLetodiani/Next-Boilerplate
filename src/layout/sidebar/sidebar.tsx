@@ -6,10 +6,10 @@ import { SidebarToggleInput } from "./sidebar-toggle";
 
 type SidebarProps = PropsWithChildren & {
   direction?: "left" | "right";
-  largeScreen?: boolean;
+  largeScreenOn?: boolean;
 };
 
-export const Sidebar = ({ children, direction = "right", largeScreen = false }: SidebarProps) => (
+export const Sidebar = ({ children, direction = "right", largeScreenOn = false }: SidebarProps) => (
   <>
     <SidebarToggleInput />
 
@@ -17,7 +17,7 @@ export const Sidebar = ({ children, direction = "right", largeScreen = false }: 
       className={twMerge(
         "fixed inset-y-0 z-50 transform overflow-y-auto border-r border-gray-200 bg-white transition-transform dark:border-gray-700 dark:bg-gray-800 peer-checked:translate-x-0",
         direction === "right" ? "right-0 translate-x-full" : "left-0 -translate-x-full",
-        largeScreen ? "lg:translate-x-0 lg:static" : "lg:hidden",
+        largeScreenOn ? "lg:translate-x-0 lg:static" : "lg:hidden",
       )}
     >
       <div className="flex h-full flex-col pt-5">

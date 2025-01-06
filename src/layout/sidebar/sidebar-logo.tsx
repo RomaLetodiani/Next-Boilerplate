@@ -1,5 +1,6 @@
 "use client";
 
+import { SIDEBAR_ID } from "@/utils/const";
 import { LayoutDashboard } from "lucide-react";
 import Link from "next/link";
 
@@ -8,6 +9,13 @@ const SidebarLogo = () => (
     <div className="flex h-16 items-center">
       <Link
         href="/"
+        onClick={() => {
+          const sidebarElement = document.getElementById(SIDEBAR_ID) as HTMLInputElement;
+          if (sidebarElement) {
+            sidebarElement.checked = false;
+            document.body.style.overflow = "auto";
+          }
+        }}
         className="flex items-center gap-2 rounded-lg bg-indigo-50 px-3 py-2 dark:bg-indigo-900/50"
       >
         <LayoutDashboard className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
