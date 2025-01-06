@@ -21,9 +21,12 @@ const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className="flex min-h-screen bg-gray-50 dark:bg-gray-900">
+      {/* Hidden checkbox for sidebar toggle */}
+      <input type="checkbox" id="sidebar-toggle" className="peer hidden" />
+
       {/* Sidebar */}
-      <div className="fixed inset-y-0 z-50 hidden w-64 flex-shrink-0 lg:flex">
-        <div className="flex w-full flex-col overflow-y-auto border-r border-gray-200 bg-white pt-5 dark:border-gray-700 dark:bg-gray-800">
+      <aside className="fixed inset-y-0 left-0 z-50 -translate-x-full transform overflow-y-auto border-r border-gray-200 bg-white transition-transform dark:border-gray-700 dark:bg-gray-800 peer-checked:translate-x-0 lg:translate-x-0 lg:static lg:w-64">
+        <div className="flex h-full flex-col pt-5">
           {/* Logo */}
           <div className="px-6">
             <div className="flex h-16 items-center">
@@ -73,76 +76,28 @@ const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
             </form>
           </div>
         </div>
-      </div>
+      </aside>
 
-      {/* Mobile Navigation */}
-      <div className="fixed inset-0 z-40 lg:hidden">
-        {/* Overlay */}
-        <div className="fixed inset-0 bg-gray-600/75 backdrop-blur-sm dark:bg-gray-900/80" />
-
-        {/* Dialog */}
-        <div className="fixed inset-0 z-40 flex">
-          <div className="relative flex w-full max-w-xs flex-1 flex-col bg-white pt-5 dark:bg-gray-800">
-            <div className="absolute right-0 top-0 -mr-12 pt-2">
-              <button
-                type="button"
-                className="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              >
-                <span className="sr-only">Close sidebar</span>
-                <X className="h-6 w-6 text-white" />
-              </button>
-            </div>
-
-            {/* Mobile Logo */}
-            <div className="px-6">
-              <div className="flex h-16 items-center">
-                <Link
-                  href="/dashboard"
-                  className="flex items-center gap-2 rounded-lg bg-indigo-50 px-4 py-2 dark:bg-indigo-900/50"
-                >
-                  <LayoutDashboard className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
-                  <span className="text-lg font-semibold text-gray-900 dark:text-white">
-                    NextSaaS
-                  </span>
-                </Link>
-              </div>
-            </div>
-
-            {/* Mobile Navigation */}
-            <div className="mt-8 flex-1 px-4">
-              <nav className="space-y-1">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="group flex items-center rounded-lg px-4 py-2.5 text-sm font-medium transition-all hover:bg-gray-50 dark:hover:bg-gray-700/50"
-                  >
-                    <item.icon className="mr-3 h-5 w-5 flex-shrink-0 text-gray-400 transition-colors group-hover:text-indigo-600 dark:group-hover:text-indigo-400" />
-                    <span className="text-gray-700 transition-colors group-hover:text-indigo-600 dark:text-gray-300 dark:group-hover:text-indigo-400">
-                      {item.name}
-                    </span>
-                  </Link>
-                ))}
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Backdrop for mobile */}
+      <label
+        htmlFor="sidebar-toggle"
+        className="fixed inset-0 z-40 bg-gray-600/75 backdrop-blur-sm transition-opacity peer-checked:opacity-100 peer-checked:pointer-events-auto pointer-events-none opacity-0 lg:hidden"
+      />
 
       {/* Main Content */}
-      <div className="flex flex-1 flex-col lg:pl-64">
+      <div className="flex flex-1 flex-col">
         {/* Top Navigation */}
         <header className="sticky top-0 z-10 flex h-16 flex-shrink-0 border-b border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
           <div className="flex flex-1 items-center justify-between px-4 sm:px-6 lg:px-8">
-            {/* Left side */}
-            <div className="flex items-center lg:opacity-0">
-              <button
-                type="button"
+            {/* Left side - Menu Toggle */}
+            <div className="flex items-center lg:hidden">
+              <label
+                htmlFor="sidebar-toggle"
                 className="-ml-2 rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 dark:hover:bg-gray-700"
               >
                 <span className="sr-only">Open sidebar</span>
                 <Menu className="h-6 w-6" />
-              </button>
+              </label>
             </div>
 
             {/* Right side */}
@@ -170,6 +125,16 @@ const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
             </div>
           </div>
         </header>
+
+        {/* Close button for mobile */}
+        <div className="fixed right-4 top-4 z-50 lg:hidden">
+          <label
+            htmlFor="sidebar-toggle"
+            className="rounded-full bg-gray-800/50 p-2 text-white backdrop-blur-sm peer-checked:pointer-events-auto pointer-events-none opacity-0 peer-checked:opacity-100"
+          >
+            <X className="h-6 w-6" />
+          </label>
+        </div>
 
         {/* Main Content */}
         <main className="flex-1">
