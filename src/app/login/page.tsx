@@ -1,7 +1,7 @@
 import { auth } from "@/lib/auth";
-import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { GitHub, Google, Microsoft } from "../assets/svgs";
 
 const SignIn = async () => {
   const session = await auth();
@@ -61,13 +61,9 @@ const SignIn = async () => {
                   type="submit"
                   className="group relative flex w-full items-center justify-center space-x-3 rounded-xl bg-white px-4 py-3 text-sm font-semibold text-gray-700 shadow-md transition-all hover:bg-gray-50 hover:shadow-lg dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600"
                 >
-                  <Image
-                    src="/google.svg"
-                    alt="Google Logo"
-                    width={20}
-                    height={20}
-                    className="transition-transform group-hover:scale-110"
-                  />
+                  <div className="h-6 w-6">
+                    <Google />
+                  </div>
                   <span>Continue with Google</span>
                 </button>
               </form>
@@ -155,12 +151,13 @@ const SignIn = async () => {
                   Trusted by developers from
                 </p>
                 <div className="flex justify-center space-x-8">
-                  {["Google", "Microsoft", "Adobe", "Shopify"].map((company) => (
+                  {socialProviders.map((provider) => (
                     <div
-                      key={company}
-                      className="rounded-lg bg-white/10 px-4 py-2 text-sm font-medium text-white"
+                      key={provider.name}
+                      className="rounded-lg bg-white/40 flex items-center gap-1 space-x-2 px-4 py-2 text-sm font-medium text-white"
                     >
-                      {company}
+                      <div className="h-6 w-6">{provider.icon()}</div>
+                      <p className="text-sm font-bold text-white">{provider.name}</p>
                     </div>
                   ))}
                 </div>
@@ -198,6 +195,13 @@ const loginFeatures = [
     title: "Responsive by Default",
     description: "Perfect experience on any device",
   },
+];
+
+// Add social logins
+const socialProviders = [
+  { name: "Google", icon: Google },
+  { name: "GitHub", icon: GitHub },
+  { name: "Microsoft", icon: Microsoft },
 ];
 
 export default SignIn;
