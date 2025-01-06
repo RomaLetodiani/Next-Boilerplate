@@ -1,5 +1,5 @@
+import { NotificationsDropdown } from "@/components/common/notifications-dropdown";
 import { ThemeToggle } from "@/components/common/theme-toggle";
-import { NotificationsDropdown } from "@/components/notifications-dropdown";
 import { DashboardSidebar } from "@/layout/dashboard/dashboard-sidebar";
 import { SidebarToggle } from "@/layout/sidebar/sidebar-toggle";
 import { Search } from "lucide-react";
