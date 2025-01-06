@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Bell, Globe, Key, Palette, Shield } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
+import { twMerge } from "tailwind-merge";
 import { z } from "zod";
 
 const settingsSchema = z.object({
@@ -183,11 +184,12 @@ const SettingsPage = () => {
             <button
               type="submit"
               disabled={!isDirty}
-              className={`rounded-lg px-4 py-2 text-sm font-medium text-white transition-colors ${
+              className={twMerge(
+                "rounded-lg px-4 py-2 text-sm font-medium text-white transition-colors",
                 isDirty
                   ? "bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
-                  : "cursor-not-allowed bg-gray-400 dark:bg-gray-600"
-              }`}
+                  : "cursor-not-allowed bg-gray-400 dark:bg-gray-600",
+              )}
             >
               Save Changes
             </button>
