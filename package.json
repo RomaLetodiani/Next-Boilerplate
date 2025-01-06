@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
+    "prebuild": "npm run db:generate",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
