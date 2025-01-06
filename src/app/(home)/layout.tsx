@@ -1,13 +1,15 @@
-import { HomeFooter } from "@/layout/(home)/home-footer";
-import { HomeHeader } from "@/layout/(home)/home-header";
+import { HomeFooter } from "@/layout/(home)/footer/home-footer";
+import { HomeHeader } from "@/layout/(home)/header/home-header";
+import { HomeMain } from "@/layout/(home)/home-main";
+import { HomeWrapper } from "@/layout/(home)/home-wrapper";
 import { PropsWithChildren } from "react";
 
 const HomeLayout = ({ children }: PropsWithChildren) => (
-  <div className="min-h-screen flex flex-col min-w-[300px] bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+  <HomeWrapper>
     <HomeHeader />
-    <main className="flex-1">{children}</main>
+    <HomeMain>{children}</HomeMain>
     <HomeFooter />
-  </div>
+  </HomeWrapper>
 );
 
 export default HomeLayout;

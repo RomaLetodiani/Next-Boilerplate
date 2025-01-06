@@ -1,7 +1,7 @@
 import { PagesDropdown } from "@/components/common/pages/pages-dropdown";
 import { ThemeToggle } from "@/components/common/theme-toggle";
 import { SidebarToggle } from "@/layout/sidebar/sidebar-toggle";
-import HomeLogo from "./home-logo";
+import HomeLogo from "../home-logo";
 import { homeNavigationItems } from "./home-navigation-items";
 import { HomeSections } from "./home-sections";
 import { HomeSidebar } from "./home-sidebar";
