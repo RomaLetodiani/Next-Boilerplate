@@ -1,12 +1,12 @@
 import { signOut } from "@/lib/auth";
 import { LogOut } from "lucide-react";
-import { Menu } from "../menu";
-import { Sidebar } from "../sidebar";
+import { Sidebar } from "../sidebar/sidebar";
+import { SidebarMenu } from "../sidebar/sidebar-menu";
 import { dashboardNavigationItems } from "./dashboard-navigation-items";
 
 export const DashboardSidebar = () => (
   <Sidebar largeScreen direction="left">
-    <Menu navigation={dashboardNavigationItems} />
+    <SidebarMenu navigation={dashboardNavigationItems} />
 
     {/* Bottom section */}
     <div className="mt-auto border-t border-gray-200 p-4 dark:border-gray-700">

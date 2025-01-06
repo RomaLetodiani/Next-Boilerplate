@@ -1,4 +1,4 @@
-import { SidebarToggle } from "@/layout/sidebar-toggle";
+import { SidebarToggle } from "@/layout/sidebar/sidebar-toggle";
 import Link from "next/link";
 import { HomeSidebar } from "./home-sidebar";
 import { PagesDropdown } from "./pages-dropdown";

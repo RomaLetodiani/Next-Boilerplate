@@ -1,5 +1,6 @@
 "use client";
 
+import { SIDEBAR_ID } from "@/utils/const";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -17,7 +18,7 @@ type MenuProps = {
   navigation: NavItem[];
 };
 
-export const Menu = ({ navigation }: MenuProps) => {
+export const SidebarMenu = ({ navigation }: MenuProps) => {
   const pathname = usePathname();
   const [openSections, setOpenSections] = useState<string[]>([]);
 
@@ -58,7 +59,7 @@ export const Menu = ({ navigation }: MenuProps) => {
           <Link
             href={item.href}
             onClick={() => {
-              document.getElementById("sidebar-toggle")?.click();
+              document.getElementById(SIDEBAR_ID)?.click();
             }}
             className={twMerge(
               "flex items-center space-x-3 rounded-lg px-3 py-2 text-sm transition-colors",
@@ -74,7 +75,7 @@ export const Menu = ({ navigation }: MenuProps) => {
 
         {/* SubNav Items */}
         {hasSubItems && isOpen && (
-          <div className="ml-6 mt-1 space-y-1 border-l border-gray-200 pl-3 dark:border-gray-700">
+          <div className="ml-6 mt-1 space-y-1 border-l border-gray-200 pl-1 dark:border-gray-700">
             {item.subNavItems?.map((subItem) => <NavLink key={subItem.name} item={subItem} />)}
           </div>
         )}

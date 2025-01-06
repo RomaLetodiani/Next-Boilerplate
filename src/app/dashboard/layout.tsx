@@ -1,7 +1,7 @@
 import { ThemeToggle } from "@/components/common/theme-toggle";
 import { NotificationsDropdown } from "@/components/notifications-dropdown";
 import { DashboardSidebar } from "@/layout/dashboard/dashboard-sidebar";
-import { SidebarToggle } from "@/layout/sidebar-toggle";
+import { SidebarToggle } from "@/layout/sidebar/sidebar-toggle";
 import { Search } from "lucide-react";
 import { PropsWithChildren } from "react";
 
@@ -12,7 +12,7 @@ const DashboardLayout = async ({ children }: PropsWithChildren) => {
   // }
 
   return (
-    <div className="flex min-h-screen min-w-[350px] bg-gray-50 dark:bg-gray-900">
+    <div className="flex min-h-screen min-w-[300px] bg-gray-50 dark:bg-gray-900">
       <DashboardSidebar />
       {/* Main Content */}
       <div className="flex flex-1 flex-col">

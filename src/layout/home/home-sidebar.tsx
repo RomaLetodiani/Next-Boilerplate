@@ -1,9 +1,9 @@
-import { Menu } from "../menu";
-import { Sidebar } from "../sidebar";
+import { Sidebar } from "../sidebar/sidebar";
+import { SidebarMenu } from "../sidebar/sidebar-menu";
 import { homeNavigationItems } from "./home-navigation-items";
 
 export const HomeSidebar = () => (
   <Sidebar>
-    <Menu navigation={homeNavigationItems} />
+    <SidebarMenu navigation={homeNavigationItems} />
   </Sidebar>
 );
