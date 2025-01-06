@@ -9,7 +9,7 @@ const ContactPage = () => {
             Get in Touch
           </h1>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-            Have a question or want to work together? We'd love to hear from you.
+            Have a question or want to work together? We&apos;d love to hear from you.
           </p>
         </div>
 

@@ -1,3 +1,4 @@
+import { GitHub, LinkedIn } from "@/assets/svgs";
 import { ThemeToggle } from "@/components/common/theme-toggle";
 import {
   BarChart,
@@ -14,7 +15,6 @@ import {
   Zap,
 } from "lucide-react";
 import Link from "next/link";
-import { GitHub, LinkedIn } from "../assets/svgs";
 
 const HomePage = async () => (
   <main className="min-h-screen min-w-[300px] bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
@@ -348,7 +348,7 @@ export default DashboardPage;`}
             Simple, transparent pricing
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-            Choose the perfect plan for your needs. Always know what you'll pay.
+            Choose the perfect plan for your needs. Always know what you&apos;ll pay.
           </p>
         </div>
 

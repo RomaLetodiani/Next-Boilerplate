@@ -1,8 +1,7 @@
 import { auth } from "@/lib/auth";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { GitHub, Google, Microsoft } from "../assets/svgs";
-
+import { GitHub, Google, Microsoft } from "@/assets/svgs";
 const SignIn = async () => {
   const session = await auth();
   if (session) {
