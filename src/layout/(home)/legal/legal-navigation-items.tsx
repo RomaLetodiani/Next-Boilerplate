@@ -2,7 +2,7 @@ import { Cookie, FileText, Shield, ShieldCheck } from "lucide-react";
 
 export const legalNavigationItems = [
   { name: "Acceptable Use", href: "/legal/acceptable-use", icon: <ShieldCheck /> },
-  { name: "Cookie Policy", href: "/legal/cookie-policy", icon: <Cookie /> },
+  { name: "Cookie Policy", href: "/legal/cookies", icon: <Cookie /> },
   { name: "Copyright", href: "/legal/copyright", icon: <FileText /> },
   { name: "Data Protection Agreement", href: "/legal/dpa", icon: <Shield /> },
   { name: "GDPR Compliance", href: "/legal/gdpr", icon: <Shield /> },
