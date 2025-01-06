@@ -1,5 +1,5 @@
 import ThemeToggle from "@/components/common/theme-toggle";
-import { auth, signOut } from "@/lib/auth";
+import { signOut } from "@/lib/auth";
 import {
   BarChart,
   Bell,
@@ -14,7 +14,7 @@ import {
 import Link from "next/link";
 
 const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
-  const session = await auth();
+  // const session = await auth();
   // if (!session) {
   //   redirect("/login");
   // }
@@ -87,10 +87,10 @@ const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
       {/* Main Content */}
       <div className="flex flex-1 flex-col">
         {/* Top Navigation */}
-        <header className="sticky top-0 z-10 flex h-16 flex-shrink-0 border-b border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
+        <header className="sticky top-0 z-20 flex h-16 flex-shrink-0 border-b border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
           <div className="flex flex-1 items-center justify-between px-4 sm:px-6 lg:px-8">
             {/* Left side - Menu Toggle */}
-            <div className="flex items-center lg:hidden">
+            <div className="flex items-center lg:opacity-0">
               <label
                 htmlFor="sidebar-toggle"
                 className="-ml-2 rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 dark:hover:bg-gray-700"
@@ -137,8 +137,10 @@ const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
         </div>
 
         {/* Main Content */}
-        <main className="flex-1">
-          <div className="px-4 py-8 sm:px-6 lg:px-8">{children}</div>
+        <main className="flex-1 ">
+          <div className="px-4 h-[calc(100vh-64px)] overflow-y-auto py-8 sm:px-6 lg:px-8">
+            {children}
+          </div>
         </main>
       </div>
     </div>
