@@ -4,6 +4,6 @@ import { homeNavigationItems } from "./home-navigation-items";
 
 export const HomeSidebar = () => (
   <Sidebar>
-    <SidebarMenu navigation={homeNavigationItems} />
+    <SidebarMenu navigation={homeNavigationItems} shouldCloseOnClick />
   </Sidebar>
 );

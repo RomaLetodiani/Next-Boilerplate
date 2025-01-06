@@ -9,11 +9,12 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 
-type MenuProps = {
+type SidebarMenuProps = {
   navigation: NavItem[];
+  shouldCloseOnClick?: boolean;
 };
 
-export const SidebarMenu = ({ navigation }: MenuProps) => {
+export const SidebarMenu = ({ navigation, shouldCloseOnClick = false }: SidebarMenuProps) => {
   const pathname = usePathname();
   const isLargeScreen = useMediaQuery("(min-width: 768px)");
   const [openSections, setOpenSections] = useState<string[]>([]);
@@ -55,7 +56,7 @@ export const SidebarMenu = ({ navigation }: MenuProps) => {
           <Link
             href={item.href}
             onClick={() => {
-              if (!isLargeScreen) {
+              if (!isLargeScreen || shouldCloseOnClick) {
                 document.getElementById(SIDEBAR_ID)?.click();
               }
             }}
