@@ -38,7 +38,7 @@ export const PagesDropdown = ({ navigationItems }: PagesDropdownProps) => (
                   <span>{section.name}</span>
                 </div>
 
-                <div className="ml-8 border-l border-gray-200 pl-1 dark:border-gray-700">
+                <div className="ml-10 border-l border-dashed border-gray-200 pl-1 dark:border-gray-700">
                   {section.subNavItems.map((item) => (
                     <PageNavItem
                       key={item.name}

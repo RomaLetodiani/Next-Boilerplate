@@ -1,4 +1,13 @@
-import { BarChart, CircleDollarSign, Home, Info, Layout, Lock, User } from "lucide-react";
+import {
+  BarChart,
+  CircleDollarSign,
+  HelpCircle,
+  Home,
+  Info,
+  Layout,
+  Lock,
+  User,
+} from "lucide-react";
 import { authNavigationItems } from "../(auth)/auth-navigation-items";
 import { dashboardNavigationItems } from "../dashboard/dashboard-navigation-items";
 
@@ -19,6 +28,7 @@ export const homeNavigationItems = [
   },
   { name: "About", href: "/about", icon: <Info /> },
   { name: "Contact", href: "/contact", icon: <User /> },
+  { name: "Help", href: "/help", icon: <HelpCircle /> },
   { name: "Pricing", href: "/pricing", icon: <BarChart /> },
   { name: "Status", href: "/status", icon: <CircleDollarSign /> },
 ];
