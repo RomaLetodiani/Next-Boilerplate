@@ -1,6 +1,5 @@
 "use client";
 
-import { logger } from "@/lib/logger";
 import { Monitor, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
@@ -8,7 +7,6 @@ import { useEffect, useState } from "react";
 export const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-  logger.info("ThemeToggle", { theme });
 
   useEffect(() => {
     setMounted(true);
