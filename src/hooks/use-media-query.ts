@@ -2,8 +2,11 @@
 
 import { useEffect, useState } from "react";
 
+const IS_SERVER = typeof window === "undefined";
+
 export const useMediaQuery = (query: string): boolean => {
   const getMatches = (query: string): boolean => {
+    if (IS_SERVER) return false;
     return window.matchMedia(query).matches;
   };
 
