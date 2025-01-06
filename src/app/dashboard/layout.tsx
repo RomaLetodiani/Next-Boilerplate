@@ -1,9 +1,10 @@
 import { ThemeToggle } from "@/components/common/theme-toggle";
 import { NotificationsDropdown } from "@/components/notifications-dropdown";
-import { Sidebar } from "@/layout/sidebar";
+import { Sidebar } from "@/layout/dashboard/sidebar";
 import { Menu, Search, X } from "lucide-react";
+import { PropsWithChildren } from "react";
 
-const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
+const DashboardLayout = async ({ children }: PropsWithChildren) => {
   // const session = await auth();
   // if (!session) {
   //   redirect("/login");
