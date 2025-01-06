@@ -109,7 +109,7 @@ const HomePage = async () => {
       <div className="bg-gray-50 py-20 dark:bg-gray-800/50">
         <div className="container mx-auto px-4">
           <h2 className="text-center text-3xl font-bold text-gray-900 dark:text-white">
-            Loved by developers
+            Loved by Developers
           </h2>
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((testimonial, index) => (
@@ -188,43 +188,49 @@ const features = [
     icon: "🚀",
     title: "Next.js 15",
     description:
-      "Built with the latest version of Next.js for optimal performance and developer experience.",
+      "Leverage the latest Next.js features including server components, streaming, and the App Router for blazing fast performance.",
   },
   {
-    icon: "🚀",
+    icon: "⚛️",
     title: "React 19",
     description:
-      "Built with the latest version of React for optimal performance and developer experience.",
+      "Take advantage of React's newest capabilities including concurrent rendering and automatic batching for smoother user experiences.",
   },
   {
     icon: "🎨",
     title: "Tailwind CSS",
-    description: "Fully customizable design system with utility-first CSS framework.",
+    description:
+      "Build beautiful interfaces with a utility-first CSS framework that enables rapid UI development with complete design flexibility.",
   },
   {
     icon: "📱",
     title: "Responsive Design",
-    description: "Fully responsive layout that works seamlessly across all devices.",
+    description:
+      "Create pixel-perfect layouts that automatically adapt to any screen size, from mobile devices to large desktop displays.",
   },
   {
-    icon: "🎨",
-    title: "Theme support",
-    description: "Fully c ustomizable design system with utility-first CSS framework.",
+    icon: "🌓",
+    title: "Theme Support",
+    description:
+      "Implement light and dark modes with an elegant theme system that respects user preferences and enhances accessibility.",
   },
   {
-    icon: "🔒",
+    icon: "🔐",
     title: "Authentication",
-    description: "Secure authentication system with role-based access control.",
+    description:
+      "Implement secure user authentication with Google OAuth, complete with protected routes and session management.",
   },
   {
     icon: "⚡",
     title: "Fast Performance",
-    description: "Optimized for speed with automatic image optimization and code splitting.",
+    description:
+      "Deliver lightning-fast experiences with automatic image optimization, code splitting, and advanced caching strategies.",
   },
   {
-    icon: "🛠️",
+    icon: "📘",
     title: "TypeScript",
-    description: "Built with TypeScript for better development experience and type safety.",
+    description:
+      "Write more reliable code with TypeScript's static typing, intelligent autocomplete, and enhanced IDE support.",
   },
 ];
 
