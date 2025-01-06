@@ -1,4 +1,3 @@
-
 import {
   BarChart,
   Check,
@@ -16,7 +15,7 @@ import {
 import Link from "next/link";
 
 const HomePage = async () => (
-  <main className="min-h-screen min-w-[300px] bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+  <>
     {/* Hero Section */}
     <div className="container mx-auto px-4 py-20 sm:py-32">
       <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -412,7 +411,7 @@ export default DashboardPage;`}
         </div>
       </div>
     </section>
-  </main>
+  </>
 );
 
 const stats = [
