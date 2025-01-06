@@ -1,4 +1,17 @@
 import { ThemeToggle } from "@/components/common/theme-toggle";
+import {
+  BarChart,
+  Code2,
+  Database,
+  Layout,
+  Lock,
+  Moon,
+  Package,
+  Phone,
+  RefreshCcw,
+  Shield,
+  Zap,
+} from "lucide-react";
 import Link from "next/link";
 
 const HomePage = async () => {
@@ -109,7 +122,7 @@ const HomePage = async () => {
                 <div className="absolute right-0 top-0 h-32 w-32 translate-x-8 translate-y--8 transform rounded-full bg-indigo-50 opacity-20 transition-transform group-hover:translate-x-6 group-hover:translate-y--6 dark:bg-indigo-900" />
                 <div className="relative">
                   <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-2xl dark:bg-indigo-900/50">
-                    {feature.icon}
+                    <feature.icon className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
                   </div>
                   <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white">
                     {feature.title}
@@ -166,6 +179,138 @@ const HomePage = async () => {
                         {testimonial.title}
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Code Preview Section */}
+      <div className="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white py-24 dark:from-gray-900 dark:to-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <div className="inline-block rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-600 dark:bg-indigo-900/50 dark:text-indigo-300">
+              Developer Experience
+            </div>
+            <h2 className="mt-4 text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
+              Write Clean, Modern Code
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-300">
+              Built with TypeScript and modern best practices for reliable, maintainable
+              applications
+            </p>
+          </div>
+
+          <div className="mt-16">
+            <div className="relative rounded-2xl bg-gray-900 p-4 shadow-2xl">
+              <div className="flex items-center space-x-2">
+                <div className="h-3 w-3 rounded-full bg-red-500" />
+                <div className="h-3 w-3 rounded-full bg-yellow-500" />
+                <div className="h-3 w-3 rounded-full bg-green-500" />
+              </div>
+              <pre className="mt-4 overflow-x-auto">
+                <code className="text-sm text-gray-300">
+                  {`// Example of our clean, modern code
+import Link from "next/link";
+
+const NotFoundPage = () => {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-center bg-gray-50 px-4 py-8">
+      <div className="text-center">
+        <h1 className="mb-4 text-6xl font-bold text-gray-900">404</h1>
+        <p className="mb-6 text-xl text-gray-600">
+          Oops! The page you&apos;re looking for doesn&apos;t exist.
+        </p>
+        <Link
+          href="/"
+          className="inline-flex items-center rounded-md bg-blue-600 px-6 py-3 text-white transition-colors hover:bg-blue-700"
+        >
+          Go back home
+        </Link>
+      </div>
+    </main>
+  );
+};
+
+export default NotFoundPage;`}
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Features Grid with Icons */}
+      <div className="relative overflow-hidden py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <div className="inline-block rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-600 dark:bg-indigo-900/50 dark:text-indigo-300">
+              Built for Scale
+            </div>
+            <h2 className="mt-4 text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
+              Everything You Need
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-300">
+              A complete solution with all the features you need to build modern web applications
+            </p>
+          </div>
+
+          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {techFeatures.map((feature, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800"
+              >
+                <div className="flex items-center space-x-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-50 dark:bg-indigo-900/50">
+                    <feature.icon className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                      {feature.title}
+                    </h3>
+                    <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Performance Metrics Section */}
+      <div className="relative overflow-hidden bg-gradient-to-b from-indigo-50 to-white py-24 dark:from-gray-800 dark:to-gray-900">
+        <div className="absolute inset-0 bg-grid-modern opacity-5" />
+        <div className="container relative mx-auto px-4">
+          <div className="text-center">
+            <div className="inline-block rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-600 dark:bg-indigo-900/50 dark:text-indigo-300">
+              Lightning Fast
+            </div>
+            <h2 className="mt-4 text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
+              Built for Performance
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600 dark:text-gray-300">
+              Optimized for the best possible user experience and developer productivity
+            </p>
+          </div>
+
+          <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {metrics.map((metric, index) => (
+              <div
+                key={index}
+                className="relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800"
+              >
+                <div className="absolute right-0 top-0 h-24 w-24 translate-x-8 translate-y--8 transform rounded-full bg-indigo-50 opacity-20 dark:bg-indigo-900" />
+                <div className="relative">
+                  <div className="text-4xl font-bold text-indigo-600 dark:text-indigo-400">
+                    {metric.value}
+                  </div>
+                  <div className="mt-2 text-sm font-medium text-gray-600 dark:text-gray-400">
+                    {metric.label}
                   </div>
                 </div>
               </div>
@@ -374,53 +519,114 @@ const testimonials = [
 
 const features = [
   {
-    icon: "🚀",
-    title: "Next.js 15",
+    icon: Zap,
+    title: "Server Components",
     description:
-      "Leverage the latest Next.js features including server components, streaming, and the App Router for blazing fast performance.",
+      "Built with React Server Components for optimal performance and reduced client-side JavaScript.",
   },
   {
-    icon: "⚛️",
-    title: "React 19",
+    icon: Layout,
+    title: "Edge Runtime",
     description:
-      "Take advantage of React's newest capabilities including concurrent rendering and automatic batching for smoother user experiences.",
+      "Deploy globally with edge functions for minimal latency and maximum availability worldwide.",
   },
   {
-    icon: "🎨",
-    title: "Tailwind CSS",
+    icon: Code2,
+    title: "Type Safety",
     description:
-      "Build beautiful interfaces with a utility-first CSS framework that enables rapid UI development with complete design flexibility.",
+      "End-to-end type safety with TypeScript, providing better developer experience and code reliability.",
   },
   {
-    icon: "📱",
-    title: "Responsive Design",
+    icon: Layout,
+    title: "Modern UI",
     description:
-      "Create pixel-perfect layouts that automatically adapt to any screen size, from mobile devices to large desktop displays.",
+      "Beautiful, responsive interfaces built with Tailwind CSS and modern design principles.",
   },
   {
-    icon: "🌓",
-    title: "Theme Support",
-    description:
-      "Implement light and dark modes with an elegant theme system that respects user preferences and enhances accessibility.",
-  },
-  {
-    icon: "🔐",
+    icon: Lock,
     title: "Authentication",
     description:
-      "Implement secure user authentication with Google OAuth, complete with protected routes and session management.",
+      "Secure authentication with NextAuth.js, supporting multiple providers and session management.",
   },
   {
-    icon: "⚡",
-    title: "Fast Performance",
+    icon: Code2,
+    title: "API Routes",
     description:
-      "Deliver lightning-fast experiences with automatic image optimization, code splitting, and advanced caching strategies.",
+      "Built-in API routes with Next.js for seamless backend functionality and data handling.",
   },
   {
-    icon: "📘",
-    title: "TypeScript",
-    description:
-      "Write more reliable code with TypeScript's static typing, intelligent autocomplete, and enhanced IDE support.",
+    icon: Moon,
+    title: "Dark Mode",
+    description: "Elegant theme system with light and dark modes that respect user preferences.",
   },
+  {
+    icon: Phone,
+    title: "Responsive Design",
+    description:
+      "Mobile-first approach ensuring perfect display across all devices and screen sizes.",
+  },
+  {
+    icon: Code2,
+    title: "React 19",
+    description: "Latest React features including concurrent rendering and automatic batching.",
+  },
+  {
+    icon: Package,
+    title: "Zero Config",
+    description: "Pre-configured development environment with ESLint, Prettier, and TypeScript.",
+  },
+  {
+    icon: RefreshCcw,
+    title: "Hot Reload",
+    description:
+      "Fast refresh development experience with instant feedback and state preservation.",
+  },
+  {
+    icon: BarChart,
+    title: "Analytics Ready",
+    description:
+      "Built-in analytics support with performance monitoring and user tracking capabilities.",
+  },
+];
+
+const techFeatures = [
+  {
+    icon: Zap,
+    title: "Server Components",
+    description: "Optimized rendering with React Server Components for better performance",
+  },
+  {
+    icon: Database,
+    title: "Edge Runtime",
+    description: "Deploy globally with edge functions for minimal latency",
+  },
+  {
+    icon: Shield,
+    title: "Type Safety",
+    description: "End-to-end type safety with TypeScript and tRPC",
+  },
+  {
+    icon: Layout,
+    title: "Responsive UI",
+    description: "Beautiful interfaces that work on any device",
+  },
+  {
+    icon: Lock,
+    title: "Authentication",
+    description: "Secure auth with NextAuth.js and OAuth providers",
+  },
+  {
+    icon: Code2,
+    title: "API Routes",
+    description: "Built-in API routes for backend functionality",
+  },
+];
+
+const metrics = [
+  { value: "100", label: "Performance Score" },
+  { value: "0.8s", label: "Time to Interactive" },
+  { value: "3.2kb", label: "First Load JS" },
+  { value: "99%", label: "Lighthouse Score" },
 ];
 
 export default HomePage;
