@@ -1,5 +1,6 @@
 "use client";
 
+import { useMediaQuery } from "@/hooks/use-media-query";
 import { NavItem } from "@/types/nav.types";
 import { SIDEBAR_ID } from "@/utils/const";
 import { ChevronDown } from "lucide-react";
@@ -14,6 +15,7 @@ type MenuProps = {
 
 export const SidebarMenu = ({ navigation }: MenuProps) => {
   const pathname = usePathname();
+  const isLargeScreen = useMediaQuery("(min-width: 768px)");
   const [openSections, setOpenSections] = useState<string[]>([]);
 
   const toggleSection = (name: string) => {
@@ -53,7 +55,9 @@ export const SidebarMenu = ({ navigation }: MenuProps) => {
           <Link
             href={item.href}
             onClick={() => {
-              document.getElementById(SIDEBAR_ID)?.click();
+              if (!isLargeScreen) {
+                document.getElementById(SIDEBAR_ID)?.click();
+              }
             }}
             className={twMerge(
               "flex items-center space-x-3 rounded-lg px-3 py-2 text-sm transition-colors",
