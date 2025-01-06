@@ -1,18 +1,12 @@
 "use client";
 
+import { NavItem } from "@/types/nav.types";
 import { SIDEBAR_ID } from "@/utils/const";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 import { twMerge } from "tailwind-merge";
-
-type NavItem = {
-  name: string;
-  href: string;
-  icon: ReactNode;
-  subNavItems?: NavItem[];
-};
 
 type MenuProps = {
   navigation: NavItem[];
