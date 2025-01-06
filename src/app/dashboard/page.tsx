@@ -77,8 +77,6 @@ const ActivityItem = ({
   </div>
 );
 
-
-
 const DashboardPage = () => (
   <div className="space-y-8">
     {/* Welcome Section */}
@@ -108,7 +106,7 @@ const DashboardPage = () => (
             Latest actions and updates from your team
           </p>
         </div>
-        <button className="rounded-lg bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-600 transition-colors hover:bg-indigo-100 dark:bg-indigo-900/50 dark:text-indigo-400 dark:hover:bg-indigo-900">
+        <button className="rounded-lg text-nowrap bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-600 transition-colors hover:bg-indigo-100 dark:bg-indigo-900/50 dark:text-indigo-400 dark:hover:bg-indigo-900">
           View all
         </button>
       </div>
