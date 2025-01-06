@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 
-const Menu = () => {
+export const Menu = () => {
   const pathname = usePathname();
 
   return (
@@ -35,5 +35,3 @@ const navigation = [
   { name: "Profile", href: "/dashboard/profile", icon: User },
   { name: "Settings", href: "/dashboard/settings", icon: Settings },
 ];
-
-export default Menu;

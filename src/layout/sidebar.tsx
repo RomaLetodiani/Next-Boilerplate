@@ -1,9 +1,9 @@
 import { signOut } from "@/lib/auth";
 import { LayoutDashboard, LogOut } from "lucide-react";
 import Link from "next/link";
-import Menu from "./menu";
+import { Menu } from "./menu";
 
-const Sidebar = () => (
+export const Sidebar = () => (
   <>
     {/* Hidden checkbox for sidebar toggle */}
     <input type="checkbox" id="sidebar-toggle" className="peer hidden" />
@@ -53,5 +53,3 @@ const Sidebar = () => (
     />
   </>
 );
-
-export default Sidebar;
