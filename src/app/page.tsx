@@ -1,5 +1,5 @@
 import { ThemeToggle } from "@/components/common/theme-toggle";
-import { Header } from "@/layout/home/header";
+import { HomeHeader } from "@/layout/home/home-header";
 import {
   BarChart,
   Check,
@@ -19,7 +19,7 @@ import { GitHub, LinkedIn } from "./assets/svgs";
 
 const HomePage = async () => (
   <>
-    <Header />
+    <HomeHeader />
     <main className="min-h-screen min-w-[300px] pt-16 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-20 sm:py-32">

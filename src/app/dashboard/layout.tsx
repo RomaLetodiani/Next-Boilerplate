@@ -1,7 +1,8 @@
 import { ThemeToggle } from "@/components/common/theme-toggle";
 import { NotificationsDropdown } from "@/components/notifications-dropdown";
-import { Sidebar } from "@/layout/dashboard/sidebar";
-import { Menu, Search, X } from "lucide-react";
+import { DashboardSidebar } from "@/layout/dashboard/dashboard-sidebar";
+import { SidebarToggle } from "@/layout/sidebar-toggle";
+import { Search } from "lucide-react";
 import { PropsWithChildren } from "react";
 
 const DashboardLayout = async ({ children }: PropsWithChildren) => {
@@ -11,33 +12,16 @@ const DashboardLayout = async ({ children }: PropsWithChildren) => {
   // }
 
   return (
-    <div className="flex min-h-screen bg-gray-50 dark:bg-gray-900">
-      <Sidebar />
+    <div className="flex min-h-screen min-w-[350px] bg-gray-50 dark:bg-gray-900">
+      <DashboardSidebar />
       {/* Main Content */}
       <div className="flex flex-1 flex-col">
         {/* Top Navigation */}
         <header className="sticky top-0 z-20 backdrop-blur-lg flex h-16 flex-shrink-0 border-b  dark:border-gray-700 bg-white/80 dark:bg-gray-800/80">
-          <div className="flex flex-1 items-center justify-between px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-1 items-center justify-between lg:justify-end px-4 sm:px-6 lg:px-8">
             {/* Right side */}
             {/* Left side - Menu Toggle */}
-            <div className="flex items-center lg:opacity-0">
-              <label
-                htmlFor="sidebar-toggle"
-                className="-ml-2 rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 dark:hover:bg-gray-700"
-              >
-                <span className="sr-only">Open sidebar</span>
-                <Menu className="h-6 w-6" />
-              </label>
-            </div>
-            {/* Close button for mobile */}
-            <div className="fixed right-4 top-4 z-50 lg:hidden">
-              <label
-                htmlFor="sidebar-toggle"
-                className="rounded-full bg-gray-800/50 p-2 text-white backdrop-blur-sm peer-checked:pointer-events-auto pointer-events-none opacity-0 peer-checked:opacity-100"
-              >
-                <X className="h-6 w-6" />
-              </label>
-            </div>
+            <SidebarToggle />
             <div className="ml-4 flex items-center space-x-4">
               {/* Theme Toggle */}
               <ThemeToggle />
