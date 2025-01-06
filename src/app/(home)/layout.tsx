@@ -1,5 +1,5 @@
-import { HomeFooter } from "@/layout/home/home-footer";
-import { HomeHeader } from "@/layout/home/home-header";
+import { HomeFooter } from "@/layout/(home)/home-footer";
+import { HomeHeader } from "@/layout/(home)/home-header";
 import { PropsWithChildren } from "react";
 
 const HomeLayout = ({ children }: PropsWithChildren) => (
@@ -9,4 +9,5 @@ const HomeLayout = ({ children }: PropsWithChildren) => (
     <HomeFooter />
   </div>
 );
+
 export default HomeLayout;
