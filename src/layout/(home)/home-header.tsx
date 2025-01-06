@@ -1,3 +1,4 @@
+import { ThemeToggle } from "@/components/common/theme-toggle";
 import { PagesDropdown } from "@/components/pages-dropdown";
 import { SidebarToggle } from "@/layout/sidebar/sidebar-toggle";
 import HomeLogo from "./home-logo";
@@ -17,6 +18,7 @@ export const HomeHeader = () => (
           <div className="hidden items-center space-x-8 md:flex">
             <HomeSections />
             <PagesDropdown navigationItems={homeNavigationItems} />
+            <ThemeToggle />
           </div>
           <SidebarToggle />
         </div>
