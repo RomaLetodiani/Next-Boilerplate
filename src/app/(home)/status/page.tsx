@@ -1,4 +1,4 @@
-import SubscribeToUpdates from "@/components/home/status/subscribe-to-updates";
+import SubscribeToUpdates from "@/components/home/pages/status/subscribe-to-updates";
 import { CheckCircle, Clock, TriangleAlert, XCircle } from "lucide-react";
 import { ReactNode } from "react";
 

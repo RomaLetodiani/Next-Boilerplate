@@ -28,7 +28,7 @@ export const PagesDropdown = ({ navigationItems }: PagesDropdownProps) => (
 
     {/* Dropdown menu */}
     <div className="absolute right-0 z-50 mt-2 w-56 origin-top-right rounded-xl border border-gray-200 bg-white p-2 shadow-lg ring-1 ring-black ring-opacity-5 dark:border-gray-700 dark:bg-gray-800 invisible opacity-0 translate-y-2 peer-checked:visible peer-checked:opacity-100 peer-checked:translate-y-0 transition-all duration-200">
-      <div className="space-y-1">
+      <div className="space-y-1 max-h-[600px] overflow-y-auto">
         {navigationItems.map((section) => (
           <div key={section.name}>
             {section.subNavItems ? (
