@@ -15,7 +15,7 @@ export const Sidebar = ({ children, direction = "right", largeScreenOn = false }
 
     <aside
       className={twMerge(
-        "fixed inset-y-0 z-50 transform overflow-y-auto border-r border-gray-200 bg-white transition-transform dark:border-gray-700 dark:bg-gray-800 peer-checked:translate-x-0",
+        "fixed inset-y-0 w-56 z-50 transform overflow-y-auto border-r border-gray-200 bg-white transition-transform dark:border-gray-700 dark:bg-gray-800 peer-checked:translate-x-0",
         direction === "right" ? "right-0 translate-x-full" : "left-0 -translate-x-full",
         largeScreenOn ? "lg:translate-x-0 lg:static" : "lg:hidden",
       )}

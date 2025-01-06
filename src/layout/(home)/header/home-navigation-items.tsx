@@ -33,6 +33,7 @@ export const productNavigationItems = [
 ];
 
 export const homeNavigationItems = [
+  ...companyNavigationItems,
   {
     name: "Dashboard",
     href: "/dashboard",
