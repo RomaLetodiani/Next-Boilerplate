@@ -33,6 +33,6 @@ body {
 
 /* This styles the scrollbar thumb (the draggable element) */
 ::-webkit-scrollbar-thumb {
-  background: #696767; /* color of the thumb */
+  background: #374151; /* color of the thumb */
   transition: all 0.5s;
 }

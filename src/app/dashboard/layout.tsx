@@ -35,8 +35,8 @@ const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
                 className="flex items-center gap-2 rounded-lg bg-indigo-50 px-4 py-2 dark:bg-indigo-900/50"
               >
                 <LayoutDashboard className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
-                <span className="text-lg font-semibold text-gray-900 dark:text-white">
-                  NextSaaS
+                <span className=" font-semibold text-gray-900 dark:text-white">
+                  NextJS Template
                 </span>
               </Link>
             </div>

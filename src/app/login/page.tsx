@@ -1,5 +1,6 @@
 import { auth } from "@/lib/auth";
 import Image from "next/image";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 
 const SignIn = async () => {
@@ -15,7 +16,7 @@ const SignIn = async () => {
         <div className="flex w-full items-center justify-center px-4 sm:px-6 lg:w-1/2 lg:px-8">
           <div className="w-full max-w-md">
             {/* Logo */}
-            <div className="mb-8 flex justify-center">
+            <Link href="/" className="mb-8 flex justify-center">
               <div className="flex items-center space-x-2 rounded-xl bg-white px-4 py-2 shadow-lg dark:bg-gray-800">
                 <div className="rounded-lg bg-indigo-600 p-2 dark:bg-indigo-500">
                   <svg
@@ -32,9 +33,11 @@ const SignIn = async () => {
                     />
                   </svg>
                 </div>
-                <span className="text-xl font-bold text-gray-900 dark:text-white">NextSaaS</span>
+                <span className="text-xl font-bold text-gray-900 dark:text-white">
+                  NextJS Template{" "}
+                </span>
               </div>
-            </div>
+            </Link>
 
             {/* Sign in card */}
             <div className="rounded-2xl bg-white/80 px-8 py-10 shadow-xl backdrop-blur-sm dark:bg-gray-800/80 sm:px-12">

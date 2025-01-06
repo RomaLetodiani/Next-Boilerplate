@@ -1,4 +1,5 @@
 import ThemeToggle from "@/components/common/theme-toggle";
+import Link from "next/link";
 
 const HomePage = async () => {
   return (
@@ -26,7 +27,7 @@ const HomePage = async () => {
               TypeScript, and Tailwind CSS.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <a
+              <Link
                 href="/dashboard"
                 className="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-8 py-3 text-base font-medium text-white transition-colors hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
               >
@@ -39,7 +40,7 @@ const HomePage = async () => {
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
-              </a>
+              </Link>
               <a
                 href="#features"
                 className="inline-flex items-center justify-center rounded-lg border border-gray-300 bg-white px-8 py-3 text-base font-medium text-gray-700 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700/50"
@@ -143,12 +144,12 @@ const HomePage = async () => {
               Join thousands of developers building amazing applications with our template.
             </p>
             <div className="mt-10">
-              <a
-                href="/dashboard"
+              <Link
+                href="/login"
                 className="rounded-lg bg-white px-8 py-3 text-base font-medium text-indigo-600 transition-colors hover:bg-gray-50 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
               >
                 Start Building Now
-              </a>
+              </Link>
             </div>
           </div>
         </div>
