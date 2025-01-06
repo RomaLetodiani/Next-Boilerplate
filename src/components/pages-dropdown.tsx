@@ -3,9 +3,13 @@
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { homeNavigationItems } from "./home-navigation-items";
+import { NavItem } from "@/types/nav.types";
 
-export const PagesDropdown = () => {
+type PagesDropdownProps = {
+  navigationItems: NavItem[];
+};
+
+export const PagesDropdown = ({ navigationItems }: PagesDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -26,7 +30,7 @@ export const PagesDropdown = () => {
           {/* Dropdown menu */}
           <div className="absolute right-0 z-50 mt-2 w-56 origin-top-right rounded-xl border border-gray-200 bg-white p-2 shadow-lg ring-1 ring-black ring-opacity-5 dark:border-gray-700 dark:bg-gray-800">
             <div className="space-y-1">
-              {homeNavigationItems.map((section) => (
+              {navigationItems.map((section) => (
                 <div key={section.name}>
                   {section.subNavItems ? (
                     <div className="space-y-1">
