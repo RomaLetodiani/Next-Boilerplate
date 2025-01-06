@@ -32,6 +32,7 @@ export const homeNavigationItems = [
     subNavItems: authNavigationItems,
   },
   { name: "About", href: "/about", icon: <Info /> },
+  { name: "Blog", href: "/blog", icon: <Book /> },
   { name: "Contact", href: "/contact", icon: <User /> },
   { name: "Docs", href: "/docs", icon: <Book /> },
   { name: "Help", href: "/help", icon: <HelpCircle /> },
