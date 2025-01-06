@@ -1,3 +1,4 @@
+import { WelcomeSection } from "@/components/dashboard/overview/welcome-section";
 import { Activity, ArrowDown, ArrowUp, Briefcase, Clock, Eye, Target, Users } from "lucide-react";
 
 const StatCard = ({
@@ -79,16 +80,7 @@ const ActivityItem = ({
 
 const DashboardPage = () => (
   <div className="space-y-8">
-    {/* Welcome Section */}
-    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 p-8 text-white shadow-lg">
-      <div className="relative z-10">
-        <h1 className="text-3xl font-bold">Welcome back, User! 👋</h1>
-        <p className="mt-2 max-w-2xl text-indigo-100">
-          Here&apos;s what&apos;s happening with your projects today.
-        </p>
-      </div>
-      <div className="absolute inset-0 bg-grid-modern" />
-    </div>
+    <WelcomeSection />
 
     {/* Stats Grid */}
     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
