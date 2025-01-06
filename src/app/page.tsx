@@ -1,4 +1,4 @@
-import ThemeToggle from "@/components/common/theme-toggle";
+import { ThemeToggle } from "@/components/common/theme-toggle";
 import Link from "next/link";
 
 const HomePage = async () => {

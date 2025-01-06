@@ -5,7 +5,7 @@ import { Monitor, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
-export default function ThemeToggle() {
+export const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   logger.info("ThemeToggle", { theme });
@@ -55,4 +55,4 @@ export default function ThemeToggle() {
       </button>
     </div>
   );
-}
+};
