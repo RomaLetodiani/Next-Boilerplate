@@ -209,28 +209,25 @@ const HomePage = async () => {
               <pre className="mt-4 overflow-x-auto">
                 <code className="text-sm text-gray-300">
                   {`// Example of our clean, modern code
-import Link from "next/link";
 
-const NotFoundPage = () => {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gray-50 px-4 py-8">
-      <div className="text-center">
-        <h1 className="mb-4 text-6xl font-bold text-gray-900">404</h1>
-        <p className="mb-6 text-xl text-gray-600">
-          Oops! The page you&apos;re looking for doesn&apos;t exist.
+const DashboardPage = () => (
+  <div className="space-y-8">
+    {/* Welcome Section */}
+    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 p-8 text-white shadow-lg">
+      <div className="relative z-10">
+        <h1 className="text-3xl font-bold">Welcome back, User! 👋</h1>
+        <p className="mt-2 max-w-2xl text-indigo-100">
+          Here's what's happening with your projects today.
         </p>
-        <Link
-          href="/"
-          className="inline-flex items-center rounded-md bg-blue-600 px-6 py-3 text-white transition-colors hover:bg-blue-700"
-        >
-          Go back home
-        </Link>
       </div>
-    </main>
-  );
-};
+      <div className="absolute inset-0 bg-grid-modern" />
+    </div>
 
-export default NotFoundPage;`}
+    {/* Your Dashboard Content... */}
+  </div>
+);
+
+export default DashboardPage;`}
                 </code>
               </pre>
             </div>

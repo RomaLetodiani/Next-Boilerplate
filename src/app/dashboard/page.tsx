@@ -77,137 +77,137 @@ const ActivityItem = ({
   </div>
 );
 
-const DashboardPage = () => {
-  const stats = [
-    {
-      title: "Total Views",
-      value: "1,234",
-      change: "12%",
-      changeType: "increase" as const,
-      icon: Eye,
-    },
-    {
-      title: "Active Users",
-      value: "56",
-      change: "8%",
-      changeType: "increase" as const,
-      icon: Users,
-    },
-    {
-      title: "Projects",
-      value: "12",
-      change: "2%",
-      changeType: "decrease" as const,
-      icon: Briefcase,
-    },
-    {
-      title: "Engagement",
-      value: "89%",
-      change: "5%",
-      changeType: "increase" as const,
-      icon: Activity,
-    },
-  ];
 
-  const activities = [
-    {
-      title: "New user registration",
-      time: "2 hours ago",
-      status: "success" as const,
-      description: "John Doe created a new account and completed onboarding",
-    },
-    {
-      title: "Project milestone completed",
-      time: "4 hours ago",
-      status: "info" as const,
-      description: "Team completed the Q1 objectives ahead of schedule",
-    },
-    {
-      title: "System update completed",
-      time: "6 hours ago",
-      status: "warning" as const,
-      description: "Successfully deployed version 2.1.0 with zero downtime",
-    },
-    {
-      title: "New feature launched",
-      time: "12 hours ago",
-      status: "success" as const,
-      description: "Dark mode support is now available across all pages",
-    },
-  ];
 
-  return (
-    <div className="space-y-8">
-      {/* Welcome Section */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 p-8 text-white shadow-lg">
-        <div className="relative z-10">
-          <h1 className="text-3xl font-bold">Welcome back, User! 👋</h1>
-          <p className="mt-2 max-w-2xl text-indigo-100">
-            Here&apos;s what&apos;s happening with your projects today.
+const DashboardPage = () => (
+  <div className="space-y-8">
+    {/* Welcome Section */}
+    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 p-8 text-white shadow-lg">
+      <div className="relative z-10">
+        <h1 className="text-3xl font-bold">Welcome back, User! 👋</h1>
+        <p className="mt-2 max-w-2xl text-indigo-100">
+          Here&apos;s what&apos;s happening with your projects today.
+        </p>
+      </div>
+      <div className="absolute inset-0 bg-grid-modern" />
+    </div>
+
+    {/* Stats Grid */}
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {stats.map((stat) => (
+        <StatCard key={stat.title} {...stat} />
+      ))}
+    </div>
+
+    {/* Recent Activity */}
+    <div className="rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800">
+      <div className="mb-6 flex items-center justify-between">
+        <div>
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Recent Activity</h2>
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            Latest actions and updates from your team
           </p>
         </div>
-        <div className="absolute inset-0 bg-grid-modern " />
+        <button className="rounded-lg bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-600 transition-colors hover:bg-indigo-100 dark:bg-indigo-900/50 dark:text-indigo-400 dark:hover:bg-indigo-900">
+          View all
+        </button>
       </div>
-
-      {/* Stats Grid */}
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-        {stats.map((stat) => (
-          <StatCard key={stat.title} {...stat} />
+      <div className="space-y-4">
+        {activities.map((activity) => (
+          <ActivityItem key={activity.title} {...activity} />
         ))}
       </div>
+    </div>
 
-      {/* Recent Activity */}
+    {/* Quick Actions */}
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
       <div className="rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800">
-        <div className="mb-6 flex items-center justify-between">
-          <div>
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Recent Activity</h2>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
-              Latest actions and updates from your team
-            </p>
-          </div>
-          <button className="rounded-lg bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-600 transition-colors hover:bg-indigo-100 dark:bg-indigo-900/50 dark:text-indigo-400 dark:hover:bg-indigo-900">
-            View all
-          </button>
-        </div>
-        <div className="space-y-4">
-          {activities.map((activity) => (
-            <ActivityItem key={activity.title} {...activity} />
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Quick Actions</h3>
+        <div className="mt-4 grid grid-cols-2 gap-4">
+          {[
+            { title: "New Project", icon: Briefcase },
+            { title: "Invite Team", icon: Users },
+            { title: "Set Goals", icon: Target },
+            { title: "View Analytics", icon: Activity },
+          ].map((action) => (
+            <button
+              key={action.title}
+              className="flex items-center space-x-2 rounded-xl bg-gray-50 p-4 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600"
+            >
+              <action.icon className="h-5 w-5" />
+              <span>{action.title}</span>
+            </button>
           ))}
         </div>
       </div>
 
-      {/* Quick Actions */}
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        <div className="rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Quick Actions</h3>
-          <div className="mt-4 grid grid-cols-2 gap-4">
-            {[
-              { title: "New Project", icon: Briefcase },
-              { title: "Invite Team", icon: Users },
-              { title: "Set Goals", icon: Target },
-              { title: "View Analytics", icon: Activity },
-            ].map((action) => (
-              <button
-                key={action.title}
-                className="flex items-center space-x-2 rounded-xl bg-gray-50 p-4 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600"
-              >
-                <action.icon className="h-5 w-5" />
-                <span>{action.title}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div className="rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Team Performance</h3>
-          <div className="mt-4">
-            {/* Add a chart or other visualization here */}
-            <div className="h-[200px] rounded-lg bg-gray-50 dark:bg-gray-700" />
-          </div>
+      <div className="rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Team Performance</h3>
+        <div className="mt-4">
+          {/* Add a chart or other visualization here */}
+          <div className="h-[200px] rounded-lg bg-gray-50 dark:bg-gray-700" />
         </div>
       </div>
     </div>
-  );
-};
+  </div>
+);
+
+const stats = [
+  {
+    title: "Total Views",
+    value: "1,234",
+    change: "12%",
+    changeType: "increase" as const,
+    icon: Eye,
+  },
+  {
+    title: "Active Users",
+    value: "56",
+    change: "8%",
+    changeType: "increase" as const,
+    icon: Users,
+  },
+  {
+    title: "Projects",
+    value: "12",
+    change: "2%",
+    changeType: "decrease" as const,
+    icon: Briefcase,
+  },
+  {
+    title: "Engagement",
+    value: "89%",
+    change: "5%",
+    changeType: "increase" as const,
+    icon: Activity,
+  },
+];
+
+const activities = [
+  {
+    title: "New user registration",
+    time: "2 hours ago",
+    status: "success" as const,
+    description: "John Doe created a new account and completed onboarding",
+  },
+  {
+    title: "Project milestone completed",
+    time: "4 hours ago",
+    status: "info" as const,
+    description: "Team completed the Q1 objectives ahead of schedule",
+  },
+  {
+    title: "System update completed",
+    time: "6 hours ago",
+    status: "warning" as const,
+    description: "Successfully deployed version 2.1.0 with zero downtime",
+  },
+  {
+    title: "New feature launched",
+    time: "12 hours ago",
+    status: "success" as const,
+    description: "Dark mode support is now available across all pages",
+  },
+];
 
 export default DashboardPage;
