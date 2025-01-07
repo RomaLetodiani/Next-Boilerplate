@@ -1,6 +1,12 @@
 {
   "name": "nextjs-boilerplate",
-  "version": "0.1.0",
+  "description": "NextJS Boilerplate",
+  "author": {
+    "name": "Roman Letodiani",
+    "email": "Roman.Letodiani03@Gmail.com",
+    "url": "https://www.linkedin.com/in/letodiani-roma/"
+  },
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
