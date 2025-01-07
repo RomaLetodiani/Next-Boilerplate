@@ -13,6 +13,8 @@ export const HomeSections = () => {
         return homeSections;
       case "/about":
         return aboutSections;
+      case "/screenshots":
+        return screenshotSections;
       default:
         return [];
     }
@@ -59,5 +61,28 @@ const aboutSections = [
     id: 3,
     title: "Team",
     href: "#team",
+  },
+];
+
+const screenshotSections = [
+  {
+    id: 1,
+    title: "All",
+    href: "#all-screenshots",
+  },
+  {
+    id: 2,
+    title: "Company",
+    href: "#company-screenshots",
+  },
+  {
+    id: 3,
+    title: "Product",
+    href: "#product-screenshots",
+  },
+  {
+    id: 4,
+    title: "Legal",
+    href: "#legal-screenshots",
   },
 ];

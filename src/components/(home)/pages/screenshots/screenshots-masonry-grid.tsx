@@ -1,17 +1,13 @@
 "use client";
 
+import { Screenshot } from "@/components/(home)/pages/screenshots/screenshot";
+import { type Screenshot as ScreenshotType } from "@/types/screenshot.types";
 import { useEffect, useState } from "react";
-import { Screenshot } from "./screenshot";
-
 interface MasonryGridProps {
-  items: Array<{
-    src: string;
-    alt: string;
-    caption?: string;
-  }>;
+  items: Array<ScreenshotType>;
 }
 
-export const MasonryGrid = ({ items }: MasonryGridProps) => {
+export const ScreenshotsMasonryGrid = ({ items }: MasonryGridProps) => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -40,7 +36,7 @@ export const MasonryGrid = ({ items }: MasonryGridProps) => {
               {item.caption}
             </p>
           )}
-          <div className="overflow-hidden rounded-xl transition-transform duration-300 ease-in-out hover:scale-[1.02]">
+          <div className="overflow-hidden rounded-xl transition-transform duration-300 ease-in-out hover:scale-[1.01]">
             <Screenshot src={item.src} alt={item.alt} />
           </div>
         </div>
