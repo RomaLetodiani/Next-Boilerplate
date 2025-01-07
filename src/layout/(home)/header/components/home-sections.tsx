@@ -44,6 +44,11 @@ const homeSections = [
     title: "Pricing",
     href: "#pricing",
   },
+  {
+    id: 3,
+    title: "Newsletter",
+    href: "#newsletter",
+  },
 ];
 
 const aboutSections = [
