@@ -20,6 +20,7 @@ const getScreenshots = () => {
           return [...acc, ...files];
         } catch (error) {
           logger.warn(`No screenshots found in ${section}`);
+          logger.error("Error reading screenshots:", error);
           return acc;
         }
       },
@@ -43,7 +44,6 @@ const getScreenshots = () => {
         };
       });
 
-    logger.info(`Found ${screenshots.length} screenshots`);
     return screenshots;
   } catch (error) {
     logger.error("Error reading screenshots:", error);
@@ -62,6 +62,7 @@ const categories = {
 
 // Only show categories that have screenshots
 const nonEmptyCategories = Object.fromEntries(
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   Object.entries(categories).filter(([_, screenshots]) => screenshots.length > 0),
 );
 
