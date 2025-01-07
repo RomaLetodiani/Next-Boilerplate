@@ -10,10 +10,9 @@ import { twMerge } from "tailwind-merge";
 
 type SidebarMenuProps = {
   navigation: NavItem[];
-  shouldCloseOnClick?: boolean;
 };
 
-export const SidebarMenu = ({ navigation, shouldCloseOnClick = false }: SidebarMenuProps) => {
+export const SidebarMenu = ({ navigation }: SidebarMenuProps) => {
   const pathname = usePathname();
   const [openSections, setOpenSections] = useState<string[]>([]);
   const [mounted, setMounted] = useState(false);
@@ -61,12 +60,10 @@ export const SidebarMenu = ({ navigation, shouldCloseOnClick = false }: SidebarM
           <Link
             href={item.href}
             onClick={() => {
-              if (shouldCloseOnClick) {
-                const sidebar = document.getElementById(SIDEBAR_ID) as HTMLInputElement;
-                if (sidebar) {
-                  sidebar.checked = false;
-                  document.body.style.overflow = "auto";
-                }
+              const sidebar = document.getElementById(SIDEBAR_ID) as HTMLInputElement;
+              if (sidebar) {
+                sidebar.checked = false;
+                document.body.style.overflow = "auto";
               }
             }}
             className={twMerge(
