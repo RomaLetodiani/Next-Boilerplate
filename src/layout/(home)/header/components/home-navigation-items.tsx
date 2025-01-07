@@ -8,6 +8,7 @@ import {
   CircleDollarSign,
   HelpCircle,
   Home,
+  Image,
   Info,
   Layout,
   LockKeyhole,
@@ -34,6 +35,7 @@ export const productNavigationItems = [
   { name: "Status", href: "/status", icon: <CircleDollarSign /> },
   { name: "Resources", href: "/resources", icon: <BookHeart /> },
   { name: "Changelog", href: "/changelog", icon: <BookCheck /> },
+  { name: "Screenshots", href: "/screenshots", icon: <Image /> },
 ];
 
 export const homeNavigationItems = [
