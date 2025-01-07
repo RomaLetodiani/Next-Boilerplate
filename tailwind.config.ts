@@ -10,10 +10,6 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
       backgroundImage: {
         grid: "url('/grid.svg')",
       },
