@@ -1,3 +1,4 @@
+import { AnalyticsHeader } from "@/components/dashboard/analytics/analytics-header";
 import {
   ArrowDown,
   ArrowUp,
@@ -109,16 +110,7 @@ const AnalyticsPage = () => {
 
   return (
     <div className="space-y-8">
-      {/* Header Section */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 p-8 text-white shadow-lg">
-        <div className="relative z-10">
-          <h1 className="text-3xl font-bold">Analytics Overview</h1>
-          <p className="mt-2 max-w-2xl text-indigo-100">
-            Track your performance and growth with detailed insights
-          </p>
-        </div>
-        <div className="absolute inset-0 bg-grid opacity-30 dark:opacity-40" />
-      </div>
+      <AnalyticsHeader />
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
