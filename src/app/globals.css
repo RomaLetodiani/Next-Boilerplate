@@ -22,3 +22,14 @@ body {
   background: #374151; /* color of the thumb */
   transition: all 0.5s;
 }
+
+/* Light Red Selection */
+::selection {
+  background: #9333ea;
+  color: #fff;
+}
+
+/* No Selection on images */
+img::selection {
+  background: none;
+}
