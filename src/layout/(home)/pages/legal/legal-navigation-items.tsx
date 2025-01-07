@@ -1,6 +1,7 @@
+import { NavItem } from "@/types/nav.types";
 import { Cookie, FileText, Shield, ShieldCheck } from "lucide-react";
 
-export const legalNavigationItems = [
+export const legalNavigationItems: NavItem[] = [
   { name: "Acceptable Use", href: "/legal/acceptable-use", icon: <ShieldCheck /> },
   { name: "Cookie Policy", href: "/legal/cookies", icon: <Cookie /> },
   { name: "Copyright", href: "/legal/copyright", icon: <FileText /> },

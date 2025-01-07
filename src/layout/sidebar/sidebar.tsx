@@ -20,9 +20,9 @@ export const Sidebar = ({ children, direction = "right", largeScreenOn = false }
         largeScreenOn ? "lg:static lg:translate-x-0" : "lg:hidden",
       )}
     >
-      <div className="flex h-full flex-col pt-5">
+      <div className="flex h-full flex-col">
         <SidebarLogo />
-        {children}
+        <div className="overflow-y-auto px-3">{children}</div>
       </div>
     </aside>
 

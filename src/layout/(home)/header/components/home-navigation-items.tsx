@@ -1,5 +1,6 @@
 import { authNavigationItems } from "@/layout/(auth)/auth-navigation-items";
 import { dashboardNavigationItems } from "@/layout/dashboard/dashboard-navigation-items";
+import { NavItem } from "@/types/nav.types";
 import {
   BarChart,
   Book,
@@ -19,7 +20,7 @@ import {
 } from "lucide-react";
 import { legalNavigationItems } from "../../pages/legal/legal-navigation-items";
 
-export const companyNavigationItems = [
+export const companyNavigationItems: NavItem[] = [
   { name: "Home", href: "/", icon: <Home /> },
   { name: "About", href: "/about", icon: <Info /> },
   { name: "Blogs", href: "/blogs", icon: <Book /> },
@@ -27,7 +28,7 @@ export const companyNavigationItems = [
   { name: "Pricing", href: "/pricing", icon: <BarChart /> },
 ];
 
-export const productNavigationItems = [
+export const productNavigationItems: NavItem[] = [
   { name: "Docs", href: "/docs", icon: <Book /> },
   { name: "Help", href: "/help", icon: <HelpCircle /> },
   { name: "Search", href: "/search", icon: <Search /> },
@@ -38,7 +39,7 @@ export const productNavigationItems = [
   { name: "Screenshots", href: "/screenshots", icon: <ImageIcon /> },
 ];
 
-export const homeNavigationItems = [
+export const homeNavigationItems: NavItem[] = [
   ...companyNavigationItems,
   {
     name: "Dashboard",

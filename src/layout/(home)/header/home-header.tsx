@@ -9,7 +9,7 @@ import { HomeSidebar } from "./components/home-sidebar";
 export const HomeHeader = () => (
   <>
     <HomeSidebar />
-    <header className="sticky top-0 z-40 border-b border-gray-200 bg-white/80 backdrop-blur-sm dark:border-gray-700 dark:bg-gray-800/80">
+    <header className="sticky top-0 z-30 border-b border-gray-200 bg-white/80 backdrop-blur-sm dark:border-gray-700 dark:bg-gray-800/80">
       <nav className="container mx-auto flex h-16 items-center justify-between gap-4 px-4">
         <HomeLogo />
 
