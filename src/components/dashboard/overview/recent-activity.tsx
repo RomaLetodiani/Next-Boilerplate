@@ -9,7 +9,7 @@ export const RecentActivity = () => (
           Latest actions and updates from your team
         </p>
       </div>
-      <button className="rounded-lg text-nowrap bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-600 transition-colors hover:bg-indigo-100 dark:bg-indigo-900/50 dark:text-indigo-400 dark:hover:bg-indigo-900">
+      <button className="text-nowrap rounded-lg bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-600 transition-colors hover:bg-indigo-100 dark:bg-indigo-900/50 dark:text-indigo-400 dark:hover:bg-indigo-900">
         View all
       </button>
     </div>
@@ -43,7 +43,7 @@ const ActivityItem = ({
               : "bg-amber-500"
         }`}
       />
-      <div className="flex-1 min-w-0">
+      <div className="min-w-0 flex-1">
         <div className="flex items-center justify-between">
           <p className="text-sm font-medium text-gray-900 dark:text-white">{title}</p>
           <div className="flex items-center space-x-2">

@@ -114,7 +114,7 @@ const ResourcesPage = () => {
                 href={category.href}
                 className="group relative overflow-hidden rounded-xl bg-white p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl dark:bg-gray-800"
               >
-                <div className="absolute right-0 top-0 h-24 w-24 translate-x-8 -translate-y-8 transform rounded-full bg-indigo-50 opacity-20 transition-transform group-hover:translate-x-6 group-hover:-translate-y-6 dark:bg-indigo-900" />
+                <div className="absolute right-0 top-0 h-24 w-24 -translate-y-8 translate-x-8 transform rounded-full bg-indigo-50 opacity-20 transition-transform group-hover:-translate-y-6 group-hover:translate-x-6 dark:bg-indigo-900" />
                 <div className="relative">
                   <div className="rounded-lg bg-indigo-50 p-3 text-indigo-600 dark:bg-indigo-900/50 dark:text-indigo-400">
                     <category.icon className="h-6 w-6" />
@@ -155,7 +155,7 @@ const ResourcesPage = () => {
                         {resource.readTime}
                       </span>
                     </div>
-                    <h3 className="mt-4 text-lg font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                    <h3 className="mt-4 text-lg font-semibold text-gray-900 group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-400">
                       {resource.title}
                     </h3>
                     <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">

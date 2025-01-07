@@ -41,7 +41,7 @@ export const ActivityFeed = () => {
     <div className="rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800">
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Recent Activity</h2>
-        <button className="text-sm text-nowrap text-indigo-600 hover:text-indigo-500 dark:text-indigo-400">
+        <button className="text-nowrap text-sm text-indigo-600 hover:text-indigo-500 dark:text-indigo-400">
           View all
         </button>
       </div>

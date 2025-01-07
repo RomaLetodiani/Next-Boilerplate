@@ -10,8 +10,8 @@ const ProfilePage = () => (
   <div className="mx-auto max-w-4xl space-y-8">
     <ProfileHeader />
 
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      <div className="lg:col-span-2 space-y-8">
+    <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+      <div className="space-y-8 lg:col-span-2">
         <ActivityFeed />
         <ProjectsGrid />
         <SkillsSection />

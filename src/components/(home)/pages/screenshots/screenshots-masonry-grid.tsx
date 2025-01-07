@@ -32,7 +32,7 @@ export const ScreenshotsMasonryGrid = ({ items }: MasonryGridProps) => {
       {items.map((item) => (
         <div key={item.src} className="group mb-4 break-inside-avoid">
           {item.caption && (
-            <p className="mt-2 font-bold text-center mb-1 text-gray-600 dark:text-gray-200">
+            <p className="mb-1 mt-2 text-center font-bold text-gray-600 dark:text-gray-200">
               {item.caption}
             </p>
           )}

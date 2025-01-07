@@ -68,7 +68,7 @@ const relatedDocs = [
 const PrivacyPage = () => (
   <div className="relative min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
     {/* Sticky Navigation */}
-    <div className="absolute  left-0 top-0 hidden h-full w-64 border-r border-gray-200 bg-white/80 p-8 backdrop-blur-xl dark:border-gray-700 dark:bg-gray-900/80 lg:block">
+    <div className="absolute left-0 top-0 hidden h-full w-64 border-r border-gray-200 bg-white/80 p-8 backdrop-blur-xl dark:border-gray-700 dark:bg-gray-900/80 lg:block">
       <div className="sticky top-20">
         <h3 className="text-sm font-semibold text-gray-900 dark:text-white">On this page</h3>
         <nav className="mt-4 space-y-2">

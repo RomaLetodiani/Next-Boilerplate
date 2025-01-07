@@ -7,7 +7,7 @@ export const SidebarToggle = () => (
   <div className="flex items-center lg:hidden">
     <label
       htmlFor={SIDEBAR_ID}
-      className="-ml-2 rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 dark:hover:bg-gray-700"
+      className="rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 dark:hover:bg-gray-700"
     >
       <span className="sr-only">Open sidebar</span>
       <Menu className="h-6 w-6" />

@@ -66,7 +66,7 @@ const DocsPage = () => (
 
       {/* Main Content */}
       <main className="lg:col-span-9">
-        <div className="prose prose-gray max-w-none dark:prose-invert">
+        <div className="prose prose-gray dark:prose-invert max-w-none">
           {/* Breadcrumbs */}
           <nav className="mb-8 flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
             <Link href="/docs" className="hover:text-gray-900 dark:hover:text-white">
@@ -97,12 +97,12 @@ const DocsPage = () => (
 
             {/* Code Example */}
             <div className="relative rounded-xl bg-gray-900 p-4">
-              <div className="absolute left-4 sm:left-auto sm:right-4 top-4">
+              <div className="absolute left-4 top-4 sm:left-auto sm:right-4">
                 <button className="rounded bg-white/10 px-2 py-1 text-xs text-white hover:bg-white/20">
                   Copy
                 </button>
               </div>
-              <pre className="overflow-x-auto mt-8 sm:mt-0 text-sm text-white">
+              <pre className="mt-8 overflow-x-auto text-sm text-white sm:mt-0">
                 <code>{`npm install @your-platform/sdk
 # or
 yarn add @your-platform/sdk`}</code>

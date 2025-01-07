@@ -7,8 +7,8 @@ const DashboardLayout = ({ children }: PropsWithChildren) => (
     <DashboardSidebar />
     <div className="flex flex-1 flex-col">
       <DashboardHeader />
-      <main className="flex-1 ">
-        <div className="px-4 h-[calc(100vh-64px)] overflow-y-auto py-8 sm:px-6 lg:px-8">
+      <main className="flex-1">
+        <div className="h-[calc(100vh-64px)] overflow-y-auto px-4 py-8 sm:px-6 lg:px-8">
           {children}
         </div>
       </main>

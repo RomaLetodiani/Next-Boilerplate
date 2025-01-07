@@ -34,7 +34,7 @@ export const Features = () => (
             key={index}
             className="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl dark:bg-gray-800"
           >
-            <div className="absolute right-0 top-0 h-32 w-32 translate-x-8 translate-y--8 transform rounded-full bg-indigo-50 opacity-20 transition-transform group-hover:translate-x-6 group-hover:translate-y--6 dark:bg-indigo-900" />
+            <div className="absolute right-0 top-0 h-32 w-32 translate-x-8 translate-y--8 transform rounded-full bg-indigo-50 opacity-20 transition-transform group-hover:translate-x-6 group-hover:translate-y-6 dark:bg-indigo-900" />
             <div className="relative">
               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-2xl dark:bg-indigo-900/50">
                 <feature.icon className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />

@@ -13,7 +13,7 @@ export const SettingsFormLayout = ({
   onSubmit,
   isDirty = false,
 }: SettingsFormLayoutProps) => (
-  <form onSubmit={onSubmit} className="md:col-span-2 space-y-8">
+  <form onSubmit={onSubmit} className="space-y-8 md:col-span-2">
     <div className="rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800">
       <h2 className="text-lg font-semibold text-gray-900 dark:text-white">{title}</h2>
       <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{description}</p>

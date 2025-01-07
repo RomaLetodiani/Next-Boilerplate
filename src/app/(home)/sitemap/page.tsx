@@ -87,7 +87,7 @@ const SitemapPage = () => {
                 className="group relative overflow-hidden rounded-xl bg-white p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl dark:bg-gray-800"
               >
                 {/* Background Decoration */}
-                <div className="absolute right-0 top-0 h-24 w-24 translate-x-8 -translate-y-8 transform rounded-full bg-indigo-50 opacity-20 transition-transform group-hover:translate-x-6 group-hover:-translate-y-6 dark:bg-indigo-900" />
+                <div className="absolute right-0 top-0 h-24 w-24 -translate-y-8 translate-x-8 transform rounded-full bg-indigo-50 opacity-20 transition-transform group-hover:-translate-y-6 group-hover:translate-x-6 dark:bg-indigo-900" />
 
                 <div className="relative">
                   {/* Section Header */}

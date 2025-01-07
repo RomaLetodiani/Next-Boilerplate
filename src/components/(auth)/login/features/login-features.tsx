@@ -35,7 +35,7 @@ export const LoginFeatures = () => (
             {socialProviders.map((provider) => (
               <div
                 key={provider.name}
-                className="rounded-lg bg-white/40 flex items-center gap-1 space-x-2 px-4 py-2 text-sm font-medium text-white"
+                className="flex items-center gap-1 space-x-2 rounded-lg bg-white/40 px-4 py-2 text-sm font-medium text-white"
               >
                 <div className="h-6 w-6">{provider.icon()}</div>
                 <p className="text-sm font-bold text-white">{provider.name}</p>

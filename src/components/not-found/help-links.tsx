@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const HelpLinks = () => (
   <div className="mt-12">
-    <p className="text-base text-gray-600 flex flex-col gap-2 dark:text-gray-400">
+    <p className="flex flex-col gap-2 text-base text-gray-600 dark:text-gray-400">
       <span>Looking for something specific?</span>
 
       <span>

@@ -120,15 +120,15 @@ const Changelog = () => {
               <div key={release.version} className="mb-16 last:mb-0">
                 {/* Version Header */}
                 <div className="flex items-center lg:justify-center">
-                  <div className="flex z-10 h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg ring-4 ring-indigo-500/10 dark:ring-indigo-400/10">
+                  <div className="z-10 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg ring-4 ring-indigo-500/10 dark:ring-indigo-400/10">
                     <CheckCircle className="h-8 w-8" />
                   </div>
                   <div
                     className={twMerge(
                       "ml-4 lg:absolute",
                       index % 2 === 0
-                        ? "lg:right-1/2 lg:text-right lg:mr-[-2rem] lg:pr-20"
-                        : "lg:left-1/2 lg:text-left lg:ml-[-2rem] lg:pl-20",
+                        ? "lg:right-1/2 lg:mr-[-2rem] lg:pr-20 lg:text-right"
+                        : "lg:left-1/2 lg:ml-[-2rem] lg:pl-20 lg:text-left",
                     )}
                   >
                     <h2 className="text-xl font-bold text-gray-900 dark:text-white">
@@ -141,10 +141,10 @@ const Changelog = () => {
                 {/* Changes */}
                 <div
                   className={twMerge(
-                    "mt-6 ml-16 lg:w-1/2",
+                    "ml-16 mt-6 lg:w-1/2",
                     index % 2 !== 0
-                      ? "lg:text-right lg:pr-16 lg:ml-0 lg:mr-auto"
-                      : "lg:text-left lg:mr-0 lg:ml-auto lg:pl-16",
+                      ? "lg:ml-0 lg:mr-auto lg:pr-16 lg:text-right"
+                      : "lg:ml-auto lg:mr-0 lg:pl-16 lg:text-left",
                   )}
                 >
                   <div className="rounded-xl bg-white/50 p-6 shadow-lg backdrop-blur-sm transition-all hover:shadow-xl dark:bg-gray-800/50">

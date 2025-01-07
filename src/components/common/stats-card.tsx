@@ -10,7 +10,7 @@ export type StatCardProps = {
 
 export const StatCard = ({ title, value, change, changeType, icon: Icon }: StatCardProps) => (
   <div className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-all hover:shadow-xl dark:bg-gray-800">
-    <div className="absolute right-0 top-0 h-24 w-24 translate-x-8 translate-y--8 transform rounded-full bg-indigo-50 opacity-20 transition-transform group-hover:translate-x-6 group-hover:translate-y--6 dark:bg-indigo-900" />
+    <div className="absolute right-0 top-0 h-24 w-24 translate-x-8 translate-y--8 transform rounded-full bg-indigo-50 opacity-20 transition-transform group-hover:translate-x-6 group-hover:translate-y-6 dark:bg-indigo-900" />
     <div className="relative">
       <div className="flex items-center justify-between">
         <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">{title}</h3>

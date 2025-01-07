@@ -66,7 +66,7 @@ export const BlogsFeaturedPosts = () => (
                 </span>
               </div>
             </div>
-            <h3 className="mt-4 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+            <h3 className="mt-4 text-xl font-semibold text-gray-900 group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-400">
               {post.title}
             </h3>
             <p className="mt-2 text-gray-500 dark:text-gray-400">{post.description}</p>

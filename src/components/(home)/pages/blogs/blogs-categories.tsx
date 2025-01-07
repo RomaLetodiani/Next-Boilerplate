@@ -1,5 +1,5 @@
 export const BlogsCategories = () => (
-  <div className="flex flex-wrap items-center mb-8 gap-2">
+  <div className="mb-8 flex flex-wrap items-center gap-2">
     {categories.map((category) => (
       <button
         key={category}

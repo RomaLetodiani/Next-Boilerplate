@@ -1,5 +1,5 @@
 export const AboutMission = () => (
-  <section id="mission" className="pt-24 relative px-4 sm:px-6 lg:px-8">
+  <section id="mission" className="relative px-4 pt-24 sm:px-6 lg:px-8">
     <div className="absolute inset-0 bg-grid opacity-50" />
 
     <div className="mx-auto max-w-7xl">

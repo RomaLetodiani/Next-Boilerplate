@@ -10,6 +10,8 @@ export const Logo = () => (
         />
       </svg>
     </div>
-    <span className="text-xl font-bold text-gray-900 dark:text-white">NextJS Template </span>
+    <span className="text-nowrap text-lg font-bold text-gray-900 dark:text-white lg:text-xl">
+      NextJS Template{" "}
+    </span>
   </>
 );

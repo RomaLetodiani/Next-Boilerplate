@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const PricingPage = () => (
   <div className="relative">
-    <div className="absolute inset-0 bg-grid h-full opacity-30 dark:opacity-50" />
+    <div className="absolute inset-0 h-full bg-grid opacity-30 dark:opacity-50" />
     {/* Header */}
     <div className="px-4 pt-16 sm:px-6 lg:px-8">
       <div className="relative mx-auto max-w-7xl text-center">
@@ -78,7 +78,7 @@ const PricingPage = () => (
           {pricingFaqs.map((faq) => (
             <div
               key={faq.question}
-              className="rounded-lg relative z-10 bg-gray-100 p-6 shadow-md dark:bg-gray-700 transition-transform hover:shadow-xl"
+              className="relative z-10 rounded-lg bg-gray-100 p-6 shadow-md transition-transform hover:shadow-xl dark:bg-gray-700"
             >
               <dt className="text-lg font-semibold text-gray-800 dark:text-gray-200">
                 {faq.question}
@@ -99,7 +99,7 @@ const PricingPage = () => (
         </p>
         <Link
           href="/contact"
-          className="mt-8 relative z-10 inline-flex items-center rounded-lg bg-indigo-600 px-6 py-3 text-white transition-colors hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
+          className="relative z-10 mt-8 inline-flex items-center rounded-lg bg-indigo-600 px-6 py-3 text-white transition-colors hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600"
         >
           Contact Support
         </Link>

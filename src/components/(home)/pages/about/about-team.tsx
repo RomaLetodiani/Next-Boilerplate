@@ -1,5 +1,5 @@
 export const AboutTeam = () => (
-  <section id="team" className="pt-24 px-4 pb-24 sm:px-6 lg:px-8">
+  <section id="team" className="px-4 pb-24 pt-24 sm:px-6 lg:px-8">
     <div className="mx-auto max-w-7xl">
       <div className="text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">

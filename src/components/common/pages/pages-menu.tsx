@@ -26,15 +26,15 @@ const PagesMenu = ({ navigationItems }: PagesMenuProps) => {
   };
 
   return (
-    <div className="absolute right-0 z-50 mt-2 w-56 origin-top-right rounded-xl border border-gray-200 bg-white p-2 shadow-lg ring-1 ring-black ring-opacity-5 dark:border-gray-700 dark:bg-gray-800 invisible opacity-0 translate-y-2 peer-checked:visible peer-checked:opacity-100 peer-checked:translate-y-0 transition-all duration-200">
-      <div className="space-y-1 max-h-[600px] pr-2 overflow-y-auto">
+    <div className="invisible absolute right-0 z-50 mt-2 w-56 origin-top-right translate-y-2 rounded-xl border border-gray-200 bg-white p-2 opacity-0 shadow-lg ring-1 ring-black ring-opacity-5 transition-all duration-200 peer-checked:visible peer-checked:translate-y-0 peer-checked:opacity-100 dark:border-gray-700 dark:bg-gray-800">
+      <div className="max-h-[600px] space-y-1 overflow-y-auto pr-2">
         {navigationItems.map((section) => (
           <div key={section.name}>
             {section.subNavItems ? (
               <div className="space-y-1">
                 <div
                   className={twMerge(
-                    "flex items-center space-x-2 px-3 py-2 rounded-lg text-xs font-semibold uppercase text-gray-500 dark:text-gray-400",
+                    "flex items-center space-x-2 rounded-lg px-3 py-2 text-xs font-semibold uppercase text-gray-500 dark:text-gray-400",
                     isActive(section.href) && "bg-gray-100 dark:bg-gray-700/50",
                   )}
                 >

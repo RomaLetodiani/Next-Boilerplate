@@ -5,7 +5,7 @@ type NewsletterProps = {
 };
 
 export const Newsletter = ({ rounded = false }: NewsletterProps) => (
-  <section id="newsletter" className=" pt-24 ">
+  <section id="newsletter" className="pt-24">
     <div
       className={twMerge(
         "relative bg-gradient-to-r from-indigo-500 to-purple-600 px-8 py-16 text-white shadow-lg",
