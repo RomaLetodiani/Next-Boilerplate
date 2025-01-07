@@ -29,7 +29,12 @@ export const SidebarMenu = ({ navigation }: SidebarMenuProps) => {
     );
   };
 
-  const isActive = (href: string) => pathname === href;
+  const isActive = (href: string) =>
+    href === "/"
+      ? pathname === "/"
+      : href === "/dashboard"
+        ? pathname === href
+        : pathname.includes(href);
 
   const NavLink = ({ item }: { item: NavItem }) => {
     const active = isActive(item.href);
