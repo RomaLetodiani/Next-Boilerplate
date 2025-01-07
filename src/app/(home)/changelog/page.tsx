@@ -195,7 +195,7 @@ const Changelog = () => {
               </p>
               <div className="mt-6 flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                 <Link
-                  href="/blog"
+                  href="/blogs"
                   className="flex w-full items-center justify-center rounded-lg bg-white px-6 py-2.5 text-indigo-600 shadow-md transition-all hover:bg-gray-50 hover:shadow-lg sm:w-auto"
                 >
                   Read Our Blog

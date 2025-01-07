@@ -22,7 +22,7 @@ import { legalNavigationItems } from "../../pages/legal/legal-navigation-items";
 export const companyNavigationItems = [
   { name: "Home", href: "/", icon: <Home /> },
   { name: "About", href: "/about", icon: <Info /> },
-  { name: "Blog", href: "/blog", icon: <Book /> },
+  { name: "Blogs", href: "/blogs", icon: <Book /> },
   { name: "Contact", href: "/contact", icon: <User /> },
   { name: "Pricing", href: "/pricing", icon: <BarChart /> },
 ];

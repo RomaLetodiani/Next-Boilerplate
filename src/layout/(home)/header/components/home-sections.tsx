@@ -13,6 +13,8 @@ export const HomeSections = () => {
         return homeSections;
       case "/about":
         return aboutSections;
+      case "/blogs":
+        return blogsSections;
       case "/screenshots":
         return screenshotSections;
       default:
@@ -66,6 +68,19 @@ const aboutSections = [
     id: 3,
     title: "Team",
     href: "#team",
+  },
+];
+
+const blogsSections = [
+  {
+    id: 1,
+    title: "Featured Posts",
+    href: "#featured-posts",
+  },
+  {
+    id: 2,
+    title: "Recent Posts",
+    href: "#recent-posts",
   },
 ];
 
