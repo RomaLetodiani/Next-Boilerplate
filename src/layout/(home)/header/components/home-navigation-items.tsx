@@ -6,7 +6,6 @@ import {
   BookCheck,
   BookHeart,
   CircleDollarSign,
-  FileText,
   HelpCircle,
   Home,
   Info,
@@ -35,7 +34,6 @@ export const productNavigationItems = [
   { name: "Status", href: "/status", icon: <CircleDollarSign /> },
   { name: "Resources", href: "/resources", icon: <BookHeart /> },
   { name: "Changelog", href: "/changelog", icon: <BookCheck /> },
-  { name: "README", href: "/docs/readme", icon: <FileText /> },
 ];
 
 export const homeNavigationItems = [
