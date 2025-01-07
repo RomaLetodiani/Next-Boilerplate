@@ -53,8 +53,6 @@ const getScreenshots = () => {
 
 const screenshots = getScreenshots();
 
-logger.info(screenshots);
-
 const categories = {
   Home: screenshots.filter((s) => s.section === "home"),
   Auth: screenshots.filter((s) => s.section === "auth"),
