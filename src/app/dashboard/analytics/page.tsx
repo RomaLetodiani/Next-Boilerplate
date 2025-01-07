@@ -2,14 +2,15 @@ import { AnalyticsChartsGrid } from "@/components/dashboard/analytics/analytics-
 import { AnalyticsDetailedStats } from "@/components/dashboard/analytics/analytics-detailed-stats";
 import { AnalyticsHeader } from "@/components/dashboard/analytics/analytics-header";
 import { AnalyticsStats } from "@/components/dashboard/analytics/analytics-stats";
+import { DashboardPageWrapper } from "@/components/dashboard/dashboard-page-wrapper";
 
 const AnalyticsPage = () => (
-  <div className="space-y-8">
+  <DashboardPageWrapper>
     <AnalyticsHeader />
     <AnalyticsStats />
     <AnalyticsChartsGrid />
     <AnalyticsDetailedStats />
-  </div>
+  </DashboardPageWrapper>
 );
 
 export default AnalyticsPage;

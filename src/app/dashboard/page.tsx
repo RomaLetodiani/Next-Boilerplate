@@ -1,3 +1,4 @@
+import { DashboardPageWrapper } from "@/components/dashboard/dashboard-page-wrapper";
 import { OverviewStats } from "@/components/dashboard/overview/overview-stats";
 import { QuickActions } from "@/components/dashboard/overview/quick-actions";
 import { RecentActivity } from "@/components/dashboard/overview/recent-activity";
@@ -5,7 +6,7 @@ import { TeamPerformance } from "@/components/dashboard/overview/team-performanc
 import { WelcomeSection } from "@/components/dashboard/overview/welcome-section";
 
 const DashboardPage = () => (
-  <div className="space-y-8">
+  <DashboardPageWrapper>
     <WelcomeSection />
     <OverviewStats />
     <RecentActivity />
@@ -13,7 +14,7 @@ const DashboardPage = () => (
       <QuickActions />
       <TeamPerformance />
     </div>
-  </div>
+  </DashboardPageWrapper>
 );
 
 export default DashboardPage;
