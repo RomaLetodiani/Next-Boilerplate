@@ -55,7 +55,7 @@ const AboutPage = () => (
       </div>
     </section>
     {/* Stats Section */}
-    <section className="mt-16 px-4 sm:px-6 lg:px-8">
+    <section id="stats" className="pt-24 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {stats.map((stat) => (
@@ -77,7 +77,7 @@ const AboutPage = () => (
       </div>
     </section>
     {/* Mission Section */}
-    <section className="mt-24 relative px-4 sm:px-6 lg:px-8">
+    <section id="mission" className="pt-24 relative px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-0 bg-grid opacity-50" />
 
       <div className="mx-auto max-w-7xl">
@@ -92,7 +92,7 @@ const AboutPage = () => (
       </div>
     </section>
     {/* Team Section */}
-    <section className="mt-24 px-4 pb-24 sm:px-6 lg:px-8">
+    <section id="team" className="pt-24 px-4 pb-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">

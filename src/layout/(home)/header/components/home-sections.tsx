@@ -11,6 +11,8 @@ export const HomeSections = () => {
     switch (pathname) {
       case "/":
         return homeSections;
+      case "/about":
+        return aboutSections;
       default:
         return [];
     }
@@ -39,5 +41,23 @@ const homeSections = [
     id: 2,
     title: "Pricing",
     href: "#pricing",
+  },
+];
+
+const aboutSections = [
+  {
+    id: 1,
+    title: "Stats",
+    href: "#stats",
+  },
+  {
+    id: 2,
+    title: "Mission",
+    href: "#mission",
+  },
+  {
+    id: 3,
+    title: "Team",
+    href: "#team",
   },
 ];
