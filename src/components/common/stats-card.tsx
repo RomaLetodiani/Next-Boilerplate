@@ -1,26 +1,14 @@
-import { Activity, ArrowDown, ArrowUp, Briefcase, Eye, Users } from "lucide-react";
+import { ArrowDown, ArrowUp } from "lucide-react";
 
-export const StatsGrid = () => (
-  <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-    {stats.map((stat) => (
-      <StatCard key={stat.title} {...stat} />
-    ))}
-  </div>
-);
-
-const StatCard = ({
-  title,
-  value,
-  change,
-  changeType,
-  icon: Icon,
-}: {
+export type StatCardProps = {
   title: string;
   value: string;
   change: string;
   changeType: "increase" | "decrease";
   icon: React.ElementType;
-}) => (
+};
+
+export const StatCard = ({ title, value, change, changeType, icon: Icon }: StatCardProps) => (
   <div className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-all hover:shadow-xl dark:bg-gray-800">
     <div className="absolute right-0 top-0 h-24 w-24 translate-x-8 translate-y--8 transform rounded-full bg-indigo-50 opacity-20 transition-transform group-hover:translate-x-6 group-hover:translate-y--6 dark:bg-indigo-900" />
     <div className="relative">
@@ -48,34 +36,3 @@ const StatCard = ({
     </div>
   </div>
 );
-
-const stats = [
-  {
-    title: "Total Views",
-    value: "1,234",
-    change: "12%",
-    changeType: "increase" as const,
-    icon: Eye,
-  },
-  {
-    title: "Active Users",
-    value: "56",
-    change: "8%",
-    changeType: "increase" as const,
-    icon: Users,
-  },
-  {
-    title: "Projects",
-    value: "12",
-    change: "2%",
-    changeType: "decrease" as const,
-    icon: Briefcase,
-  },
-  {
-    title: "Engagement",
-    value: "89%",
-    change: "5%",
-    changeType: "increase" as const,
-    icon: Activity,
-  },
-];
