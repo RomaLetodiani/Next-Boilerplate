@@ -2,6 +2,7 @@
 
 import { Screenshot } from "@/components/(home)/pages/screenshots/screenshot";
 import { type Screenshot as ScreenshotType } from "@/types/screenshot.types";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 interface MasonryGridProps {
   items: Array<ScreenshotType>;
@@ -30,7 +31,7 @@ export const ScreenshotsMasonryGrid = ({ items }: MasonryGridProps) => {
   return (
     <div className="columns-1 gap-8 sm:columns-2 lg:columns-3">
       {items.map((item) => (
-        <div key={item.src} className="group mb-4 break-inside-avoid">
+        <Link href={item.src} key={item.src} className="group mb-4 block break-inside-avoid">
           {item.caption && (
             <p className="mb-1 mt-2 text-center font-bold text-gray-600 dark:text-gray-200">
               {item.caption}
@@ -39,7 +40,7 @@ export const ScreenshotsMasonryGrid = ({ items }: MasonryGridProps) => {
           <div className="overflow-hidden rounded-xl transition-transform duration-300 ease-in-out hover:scale-[1.01]">
             <Screenshot src={item.src} alt={item.alt} />
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );
