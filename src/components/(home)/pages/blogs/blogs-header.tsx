@@ -1,7 +1,7 @@
 import { Search } from "lucide-react";
 
 export const BlogsHeader = () => (
-  <div className="relative md:pt-24 overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 p-8 text-white shadow-lg lg:p-12">
+  <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 p-8 text-white shadow-lg lg:p-12 ">
     <div className="relative z-10">
       <h1 className="text-center text-3xl font-bold lg:text-4xl">Blog & Articles</h1>
       <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-indigo-100">
