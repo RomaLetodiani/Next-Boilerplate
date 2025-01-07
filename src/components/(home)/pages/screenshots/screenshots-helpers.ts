@@ -7,6 +7,7 @@ const getScreenshots = () => {
   try {
     const screenshotsDir = path.join(process.cwd(), "public", "screenshots");
     const sections = ["company", "product", "dashboard", "legal"];
+    const abbreviations = ["dpa", "gdpr", "ccpa"];
 
     const allFiles = sections.reduce(
       (acc, section) => {
@@ -32,7 +33,11 @@ const getScreenshots = () => {
         const name = file.replace(/\.(jpg|jpeg|png|gif|webp)$/i, "");
         const formattedName = name
           .split("-")
-          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .map((word) =>
+            abbreviations.includes(word)
+              ? word.toUpperCase()
+              : word.charAt(0).toUpperCase() + word.slice(1),
+          )
           .join(" ");
 
         return {
