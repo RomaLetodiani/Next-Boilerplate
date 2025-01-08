@@ -6,6 +6,7 @@ const envSchema = zod.object({
   DATABASE_URL: zod.string().min(1),
   AUTH_GOOGLE_ID: zod.string().min(1),
   AUTH_GOOGLE_SECRET: zod.string().min(1),
+  NEXT_PUBLIC_SITE_URL: zod.string().min(1),
 });
 
 export const env = envSchema.parse(process.env);
