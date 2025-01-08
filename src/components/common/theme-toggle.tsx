@@ -13,7 +13,7 @@ export const ThemeToggle = () => {
   }, []);
 
   if (!mounted) {
-    return null;
+    return <div className="h-8 w-[88px] rounded-lg bg-gray-100 p-1 dark:bg-gray-700" />;
   }
 
   return (
