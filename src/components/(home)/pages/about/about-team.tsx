@@ -1,7 +1,9 @@
+import { twMerge } from "tailwind-merge";
+
 export const AboutTeam = () => (
   <section id="team" className="px-4 pb-24 pt-24 sm:px-6 lg:px-8">
     <div className="mx-auto max-w-7xl">
-      <div className="text-center">
+      <div className="stagger-1 slide-down text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
           Meet Our Team
         </h2>
@@ -11,10 +13,19 @@ export const AboutTeam = () => (
       </div>
 
       <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        {team.map((member) => (
+        {team.map((member, index) => (
           <div
             key={member.name}
-            className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl dark:bg-gray-800"
+            className={twMerge(
+              "card-hover group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800",
+              index === 0
+                ? "stagger-1 slide-down"
+                : index === 1
+                  ? "stagger-2 slide-up"
+                  : index === 2
+                    ? "stagger-3 slide-down"
+                    : "stagger-4 slide-up",
+            )}
           >
             <div className="aspect-w-1 aspect-h-1 relative mb-4 overflow-hidden rounded-xl">
               <div className="h-48 w-full rounded-xl bg-indigo-100 dark:bg-indigo-900/50">

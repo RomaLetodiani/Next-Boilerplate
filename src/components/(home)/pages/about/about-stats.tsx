@@ -4,10 +4,18 @@ export const AboutStats = () => (
   <section id="stats" className="px-4 pt-24 sm:px-6 lg:px-8">
     <div className="mx-auto max-w-7xl">
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-        {stats.map((stat) => (
+        {stats.map((stat, index) => (
           <div
             key={stat.label}
-            className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-all hover:shadow-xl dark:bg-gray-800"
+            className={`slide-up group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-all hover:shadow-xl dark:bg-gray-800 ${
+              index === 0
+                ? "stagger-1"
+                : index === 1
+                  ? "stagger-2"
+                  : index === 2
+                    ? "stagger-3"
+                    : "stagger-4"
+            }`}
           >
             <div className="absolute right-0 top-0 h-24 w-24 translate-x-8 translate-y--8 transform rounded-full bg-indigo-50 opacity-20 transition-transform group-hover:translate-x-6 group-hover:translate-y-6 dark:bg-indigo-900" />
             <div className="relative">
