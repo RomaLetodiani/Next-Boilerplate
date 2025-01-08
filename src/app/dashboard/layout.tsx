@@ -3,7 +3,7 @@ import { DashboardSidebar } from "@/layout/dashboard/dashboard-sidebar";
 import { PropsWithChildren } from "react";
 
 const DashboardLayout = ({ children }: PropsWithChildren) => (
-  <div className="flex min-h-screen min-w-[300px] bg-gray-50 dark:bg-gray-900">
+  <div className="flex min-h-dvh min-w-[300px] bg-gray-50 dark:bg-gray-900">
     <DashboardSidebar />
     <div className="flex flex-1 flex-col">
       <DashboardHeader />
