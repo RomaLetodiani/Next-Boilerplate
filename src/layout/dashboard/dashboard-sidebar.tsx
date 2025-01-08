@@ -10,7 +10,7 @@ export const DashboardSidebar = () => (
     <SidebarMenu navigation={dashboardNavigationItems} />
 
     {/* Bottom section */}
-    <div className="mt-8 border-t border-gray-200 p-4 dark:border-gray-700">
+    <div className="slide-left stagger-1 mt-8 border-t border-gray-200 py-4 dark:border-gray-700">
       <form
         action={async () => {
           "use server";
@@ -20,7 +20,7 @@ export const DashboardSidebar = () => (
       >
         <button
           type="submit"
-          className="flex w-full items-center rounded-lg py-2.5 text-sm font-medium text-red-600 transition-colors hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-900/50"
+          className="flex w-full items-center rounded-lg px-4 py-2.5 text-sm font-medium text-red-600 transition-colors hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-900/50"
         >
           <LogOut className="mr-3 h-5 w-5" />
           Sign Out

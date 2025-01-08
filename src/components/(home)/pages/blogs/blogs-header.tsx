@@ -1,16 +1,18 @@
 import { Search } from "lucide-react";
 
 export const BlogsHeader = () => (
-  <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 p-8 text-white shadow-lg lg:p-12">
+  <div className="slide-right relative overflow-hidden rounded-2xl bg-gradient-to-r from-indigo-500 to-purple-600 p-8 text-white shadow-lg lg:p-12">
     <div className="relative z-10">
-      <h1 className="text-center text-3xl font-bold lg:text-4xl">Blog & Articles</h1>
-      <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-indigo-100">
+      <h1 className="slide-down stagger-5 text-center text-3xl font-bold lg:text-4xl">
+        Blog & Articles
+      </h1>
+      <p className="stagger-3 slide-down mx-auto mt-4 max-w-2xl text-center text-lg text-indigo-100">
         Insights, tutorials, and updates from our team to help you build better software.
       </p>
 
       {/* Search Bar */}
       <div className="mx-auto mt-8 max-w-2xl">
-        <div className="relative">
+        <div className="form-field stagger-5 relative">
           <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400" />
           <input
             type="text"

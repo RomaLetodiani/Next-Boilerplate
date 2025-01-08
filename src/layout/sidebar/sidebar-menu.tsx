@@ -52,7 +52,7 @@ export const SidebarMenu = ({ navigation }: SidebarMenuProps) => {
     return (
       <li
         className={twMerge(
-          "mb-0.5 rounded-lg py-2 pl-4 pr-3 last:mb-0",
+          "slide-left mb-0.5 rounded-lg py-2 pl-4 pr-3 last:mb-0",
           active &&
             "bg-[linear-gradient(135deg,var(--tw-gradient-stops))] from-indigo-500/[0.12] to-indigo-500/[0.04] dark:from-indigo-500/[0.24]",
         )}

@@ -16,9 +16,5 @@ export default {
     },
   },
 
-  plugins: [
-    require("@tailwindcss/forms"),
-    require("tailwindcss-motion"),
-    require("tailwindcss-intersect"),
-  ],
+  plugins: [require("@tailwindcss/forms"), require("tailwindcss-motion")],
 } satisfies Config;

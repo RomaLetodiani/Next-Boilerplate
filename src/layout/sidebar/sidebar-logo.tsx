@@ -5,7 +5,7 @@ import { LayoutDashboard } from "lucide-react";
 import Link from "next/link";
 
 const SidebarLogo = () => (
-  <div className="px-3">
+  <div className="slide-down stagger-3 px-3">
     <div className="flex h-16 w-full items-center">
       <Link
         href="/"

@@ -9,28 +9,19 @@
   }
 
   .slide-up {
-    @apply motion-opacity-in-0 motion-translate-y-in-50 motion-duration-500 motion-ease-spring-smooth;
+    @apply motion-translate-y-in-50 motion-opacity-in-0 motion-duration-500 motion-ease-spring-smooth;
   }
 
   .slide-down {
-    @apply motion-opacity-in-0 motion-translate-y-in--50 motion-duration-500 motion-ease-spring-smooth;
+    @apply -motion-translate-y-in-50 motion-opacity-in-0 motion-duration-500 motion-ease-spring-smooth;
   }
 
   .slide-left {
-    @apply motion-opacity-in-0 motion-translate-x-in--50 motion-duration-500 motion-ease-spring-smooth;
+    @apply -motion-translate-x-in-50 motion-opacity-in-0 motion-duration-500 motion-ease-spring-smooth;
   }
 
   .slide-right {
-    @apply motion-opacity-in-0 motion-translate-x-in-50 motion-duration-500 motion-ease-spring-smooth;
-  }
-
-  /* Scroll Animations */
-  .scroll-fade-in {
-    @apply intersect:motion-opacity-in-0 motion-duration-700 motion-ease-spring-smooth;
-  }
-
-  .scroll-slide-up {
-    @apply intersect:motion-opacity-in-0 intersect:motion-translate-y-in-25 motion-duration-700 motion-ease-spring-smooth;
+    @apply motion-translate-x-in-50 motion-opacity-in-0 motion-duration-500 motion-ease-spring-smooth;
   }
 
   /* Staggered List Animations */
@@ -55,37 +46,22 @@
     @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
   }
 
-  /* Feature Animations */
-  .feature-card {
-    @apply intersect:motion-opacity-in-0 intersect:motion-translate-y-in-25 motion-duration-700 motion-ease-spring-smooth transition-transform hover:scale-[1.02];
-  }
-
   /* Hero Section Animations */
   .hero-title {
-    @apply motion-opacity-in-0 motion-translate-y-in-25 motion-duration-1000 motion-ease-spring-smooth;
+    @apply motion-translate-y-in-25 motion-opacity-in-0 motion-duration-1000 motion-ease-spring-smooth;
   }
 
   .hero-subtitle {
-    @apply motion-opacity-in-0 motion-translate-y-in-25 motion-duration-1000 motion-delay-200 motion-ease-spring-smooth;
+    @apply motion-translate-y-in-25 motion-opacity-in-0 motion-duration-1000 motion-delay-200 motion-ease-spring-smooth;
   }
 
   .hero-cta {
-    @apply motion-opacity-in-0 motion-translate-y-in-25 motion-duration-1000 motion-delay-500 motion-ease-spring-smooth;
-  }
-
-  /* Stats Animation */
-  .stats-item {
-    @apply intersect:motion-opacity-in-0 intersect:motion-translate-y-in-25 motion-duration-700 motion-ease-spring-smooth;
-  }
-
-  /* Testimonial Animations */
-  .testimonial-card {
-    @apply intersect:motion-opacity-in-0 intersect:motion-translate-x-in-25 motion-duration-700 motion-ease-spring-smooth;
+    @apply motion-translate-y-in-25 motion-opacity-in-0 motion-duration-1000 motion-delay-500 motion-ease-spring-smooth;
   }
 
   /* Form Field Animations */
   .form-field {
-    @apply motion-opacity-in-0 motion-translate-y-in-10 motion-duration-500 motion-ease-spring-smooth;
+    @apply motion-translate-y-in-100 motion-opacity-in-0 motion-duration-500 motion-ease-spring-smooth;
   }
 
   /* Button Animations */
@@ -93,19 +69,9 @@
     @apply transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98];
   }
 
-  /* Navigation Animations */
-  .nav-item {
-    @apply motion-opacity-in-0 motion-translate-y-in-10 motion-duration-500 motion-ease-spring-smooth;
-  }
-
   /* Image Animations */
   .image-reveal {
-    @apply intersect:motion-opacity-in-0 intersect:motion-blur-in-sm motion-duration-1000 motion-ease-spring-smooth;
-  }
-
-  /* Section Transitions */
-  .section-enter {
-    @apply intersect:motion-opacity-in-0 intersect:motion-translate-y-in-25 motion-duration-1000 motion-ease-spring-smooth;
+    @apply motion-blur-in-sm motion-opacity-in-50 motion-duration-500 motion-ease-spring-smooth;
   }
 }
 
