@@ -1,6 +1,7 @@
 import { GitHub, LinkedIn } from "@/assets/svgs";
 
 export const SIDEBAR_ID = "sidebar-toggle";
+export const PAGES_MENU_ID = "pages-toggle";
 
 export const socials = [
   {
