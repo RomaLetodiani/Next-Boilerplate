@@ -15,6 +15,8 @@ export const HomeSections = () => {
         return aboutSections;
       case "/blogs":
         return blogsSections;
+      case "/contact":
+        return contactSections;
       case "/screenshots":
         return screenshotSections;
       default:
@@ -81,6 +83,14 @@ const blogsSections = [
     id: 2,
     title: "Recent Posts",
     href: "#recent-posts",
+  },
+];
+
+const contactSections = [
+  {
+    id: 1,
+    title: "Send a Message",
+    href: "#send-message",
   },
 ];
 
