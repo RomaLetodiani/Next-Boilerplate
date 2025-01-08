@@ -2,11 +2,11 @@ import { Mail, MessageSquare, Phone, Send } from "lucide-react";
 import Link from "next/link";
 
 export const ContactQuickOptions = () => (
-  <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+  <section className="slide-up grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
     {quickOptions.map((item) => (
       <div
         key={item.title}
-        className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl dark:bg-gray-800"
+        className="card-hover group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg dark:bg-gray-800"
       >
         <div className="absolute right-0 top-0 h-24 w-24 translate-x-8 translate-y--8 transform rounded-full bg-indigo-50 opacity-20 transition-transform group-hover:translate-x-6 group-hover:translate-y-6 dark:bg-indigo-900" />
         <div className="relative">
@@ -25,7 +25,7 @@ export const ContactQuickOptions = () => (
         </div>
       </div>
     ))}
-  </div>
+  </section>
 );
 
 const quickOptions = [

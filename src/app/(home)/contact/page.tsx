@@ -11,7 +11,7 @@ const ContactPage = () => (
     <div className="container relative mx-auto px-4 py-16">
       <ContactHeader />
       <ContactQuickOptions />
-      <section id="send-message" className="grid gap-8 pt-24 lg:grid-cols-2">
+      <section id="send-message" className="slide-up grid gap-8 pt-24 lg:grid-cols-2">
         <ContactForm />
         <div className="space-y-8">
           <ContactInformation />
