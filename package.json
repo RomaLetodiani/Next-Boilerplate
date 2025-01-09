@@ -13,12 +13,18 @@
     "dev": "next dev --turbopack",
     "prebuild": "npm run db:generate",
     "build": "next build",
+    "check": "next lint && tsc --noEmit",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "format": "prettier --write \"**/*.{ts,tsx,json,css}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
+    "format:write": "prettier --write \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
-    "db:reset": "prisma migrate reset --skip-seed && prisma db push && prisma db seed"
+    "db:reset": "prisma migrate reset --skip-seed && prisma db push && prisma db seed",
+    "prepare": "husky",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@auth/prisma-adapter": "^2.7.4",
@@ -44,6 +50,7 @@
     "eslint-config-next": "15.1.3",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "husky": "^9.1.7",
     "postcss": "^8",
     "prettier": "^3.4.2",
     "prettier-plugin-organize-imports": "^4.1.0",

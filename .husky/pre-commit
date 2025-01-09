@@ -1,0 +1,56 @@
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m'
+BOLD='\033[1m'
+
+echo "${BOLD}Running pre-commit checks...${NC}\n"
+
+# First format files
+echo "🎨 Running formatter..."
+bun run format:write || {
+    echo -e "${RED}Formatting failed${NC}"
+    exit 1
+}
+
+# Re-stage formatted files
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g')
+if [ -n "$STAGED_FILES" ]; then
+    git add $STAGED_FILES
+fi
+
+# Run format check to ensure everything is formatted
+echo "✨ Checking format..."
+bun run format:check || {
+    echo -e "${RED}Format check failed${NC}"
+    exit 1
+}
+
+# Run lint with auto-fix
+echo "🔍 Running lint with auto-fix..."
+bun run lint:fix || {
+    echo -e "${RED}Lint failed${NC}"
+    exit 1
+}
+
+# Run type check
+echo "📝 Running type check..."
+bun run typecheck || {
+    echo -e "${RED}Type check failed${NC}"
+    exit 1
+}
+
+# Run complete check (lint + type check)
+echo "🔎 Running final checks..."
+bun run check || {
+    echo -e "${RED}Final checks failed${NC}"
+    exit 1
+}
+
+# Run build to ensure everything compiles
+echo "🏗️ Building project..."
+bun run build || {
+    echo -e "${RED}Build failed${NC}"
+    exit 1
+}
+
+echo -e "\n${GREEN}✅ All pre-commit checks passed!${NC}"
