@@ -33,6 +33,8 @@ A modern, feature-rich boilerplate for building scalable web applications with N
   - Import sorting
   - Tailwind sorting
   - Turbopack support
+  - Bun support
+  - Husky
 
 ## 📦 Tech Stack
 
