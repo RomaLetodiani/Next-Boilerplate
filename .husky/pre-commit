@@ -1,1 +1,15 @@
-npx husky add .husky/pre-commit "npx lint-staged"
+. "$(dirname "$0")/_/husky.sh"
+
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m'
+BOLD='\033[1m'
+
+# Run lint-staged for staged files
+echo "${BOLD}Running lint-staged...${NC}"
+npx lint-staged || {
+    echo -e "${RED}Lint-staged checks failed. Aborting commit.${NC}"
+    exit 1
+}
+
+echo -e "\n${GREEN}✅ Pre-commit checks passed!${NC}"
