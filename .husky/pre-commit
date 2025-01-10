@@ -3,11 +3,19 @@ RED='\033[0;31m'
 NC='\033[0m'
 BOLD='\033[1m'
 
+# Check for bun or fallback to npm
+if command -v bun >/dev/null 2>&1; then
+    RUNNER="bun"
+else
+    echo -e "${RED}Bun is not installed. Falling back to npm.${NC}"
+    RUNNER="npm"
+fi
+
 echo "${BOLD}Running pre-commit checks...${NC}\n"
 
 # First format files
 echo "🎨 Running formatter..."
-bun run format:write || {
+$RUNNER run format:write || {
     echo -e "${RED}Formatting failed${NC}"
     exit 1
 }
@@ -20,35 +28,35 @@ fi
 
 # Run format check to ensure everything is formatted
 echo "✨ Checking format..."
-bun run format:check || {
+$RUNNER run format:check || {
     echo -e "${RED}Format check failed${NC}"
     exit 1
 }
 
 # Run lint with auto-fix
 echo "🔍 Running lint with auto-fix..."
-bun run lint:fix || {
+$RUNNER run lint:fix || {
     echo -e "${RED}Lint failed${NC}"
     exit 1
 }
 
 # Run type check
 echo "📝 Running type check..."
-bun run typecheck || {
+$RUNNER run typecheck || {
     echo -e "${RED}Type check failed${NC}"
     exit 1
 }
 
 # Run complete check (lint + type check)
 echo "🔎 Running final checks..."
-bun run check || {
+$RUNNER run check || {
     echo -e "${RED}Final checks failed${NC}"
     exit 1
 }
 
 # Run build to ensure everything compiles
 echo "🏗️ Building project..."
-bun run build || {
+$RUNNER run build || {
     echo -e "${RED}Build failed${NC}"
     exit 1
 }
