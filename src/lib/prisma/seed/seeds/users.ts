@@ -1,4 +1,4 @@
-import { logger } from "@/lib/logger";
+import { logger } from "@/utils/logger";
 import { db } from "../../db";
 
 const users = ["roman.letodiani03@gmail.com"];

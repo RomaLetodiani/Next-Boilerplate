@@ -1,7 +1,7 @@
 import { env } from "@/env";
+import { logger } from "@/utils/logger";
 import { NextAuthConfig } from "next-auth";
 import Google from "next-auth/providers/google";
-import { logger } from "../logger";
 import { db } from "../prisma/db";
 
 export default {
