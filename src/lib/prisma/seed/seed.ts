@@ -11,7 +11,7 @@ await runSeed().finally(() => {
     .then(() => {
       logger.info("Disconnected from database");
     })
-    .catch((error) => {
+    .catch((error: unknown) => {
       logger.error("Error disconnecting from database", error);
     });
 });
