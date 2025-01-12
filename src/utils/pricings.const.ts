@@ -1,3 +1,5 @@
+import { FAQItem } from "@/types/faq.types";
+
 export const pricingPlans = [
   {
     name: "Starter",
@@ -50,7 +52,7 @@ export const pricingPlans = [
   },
 ];
 
-export const pricingFaqs = [
+export const pricingFaqs: FAQItem[] = [
   {
     question: "How does the free trial work?",
     answer:

@@ -8,10 +8,10 @@ export const Pricing = () => (
   >
     <div className="container mx-auto px-4">
       <div className="text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+        <h2 className="slide-up stagger-1 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
           Simple, transparent pricing
         </h2>
-        <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
+        <p className="slide-up stagger-2 mt-4 text-lg text-gray-600 dark:text-gray-300">
           Choose the perfect plan for your needs. Always know what you&apos;ll pay.
         </p>
       </div>
