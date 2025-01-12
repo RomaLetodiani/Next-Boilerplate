@@ -4,7 +4,7 @@ import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
 export const PricingPlans = () => (
-  <section id="pricing" className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
+  <section id="pricing" className="mx-auto max-w-7xl px-4 pt-24 sm:px-6 lg:px-8">
     <div className="grid gap-8 lg:grid-cols-3">
       {pricingPlans.map((plan, index) => (
         <div

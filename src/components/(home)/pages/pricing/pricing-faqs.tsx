@@ -13,7 +13,7 @@ export const PricingFAQs = () => {
   };
 
   return (
-    <div className="my-16 pt-10">
+    <div id="faq" className="mb-16 pt-24">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="slide-up stagger-1 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
           Frequently asked questions

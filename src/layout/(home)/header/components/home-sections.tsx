@@ -19,6 +19,8 @@ export const HomeSections = () => {
         return contactSections;
       case "/screenshots":
         return screenshotSections;
+      case "/pricing":
+        return pricingSections;
       default:
         return [];
     }
@@ -101,6 +103,19 @@ const contactSections = [
     id: 1,
     title: "Send a Message",
     href: "#send-message",
+  },
+];
+
+const pricingSections = [
+  {
+    id: 1,
+    title: "Pricing",
+    href: "#pricing",
+  },
+  {
+    id: 2,
+    title: "FAQ",
+    href: "#faq",
   },
 ];
 
