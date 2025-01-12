@@ -45,13 +45,23 @@ const homeSections = [
   },
   {
     id: 2,
-    title: "Pricing",
-    href: "#pricing",
+    title: "Testimonials",
+    href: "#testimonials",
   },
   {
     id: 3,
+    title: "FAQ",
+    href: "#faq",
+  },
+  {
+    id: 4,
     title: "Newsletter",
     href: "#newsletter",
+  },
+  {
+    id: 5,
+    title: "Pricing",
+    href: "#pricing",
   },
 ];
 
