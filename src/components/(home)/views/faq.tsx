@@ -1,7 +1,7 @@
 "use client";
 
+import { FAQSection } from "@/components/common/faq-section";
 import { FAQItem } from "@/types/faq.types";
-import { ChevronDownIcon } from "lucide-react";
 import { useState } from "react";
 
 export const FAQ = () => {
@@ -12,7 +12,10 @@ export const FAQ = () => {
   };
 
   return (
-    <section id="faq" className="relative overflow-hidden border-t border-gray-200 bg-white/50 py-24 dark:border-gray-700 dark:bg-gray-800/50">
+    <section
+      id="faq"
+      className="relative overflow-hidden border-t border-gray-200 bg-white/50 py-24 dark:border-gray-700 dark:bg-gray-800/50"
+    >
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-2xl text-center">
           <div className="slide-up button-pop mb-6 inline-block select-none rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-600 dark:bg-indigo-900/50 dark:text-indigo-300">
@@ -29,40 +32,7 @@ export const FAQ = () => {
           </p>
         </div>
 
-        <div className="mx-auto mt-16 max-w-3xl space-y-4">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className={`card-hover overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all dark:border-gray-700 dark:bg-gray-800 ${
-                index < 3 ? `stagger-${index + 1}` : ""
-              }`}
-            >
-              <button
-                onClick={() => toggleAnswer(index)}
-                className="flex w-full items-center justify-between px-6 py-4 text-left"
-              >
-                <dt className="text-lg font-semibold leading-7 text-gray-900 dark:text-white">
-                  {faq.question}
-                </dt>
-                <span className="ml-6 flex h-7 items-center">
-                  <ChevronDownIcon
-                    className={`h-6 w-6 transform text-indigo-500 transition-transform duration-200 dark:text-indigo-400 ${
-                      openIndex === index ? "rotate-180" : ""
-                    }`}
-                  />
-                </span>
-              </button>
-              <dd
-                className={`overflow-hidden px-6 transition-all duration-200 ${
-                  openIndex === index ? "max-h-48 pb-4" : "max-h-0"
-                }`}
-              >
-                <p className="text-base leading-7 text-gray-600 dark:text-gray-300">{faq.answer}</p>
-              </dd>
-            </div>
-          ))}
-        </div>
-
+        <FAQSection faqs={faqs} openIndex={openIndex} toggleAnswer={toggleAnswer} />
         <div className="mt-16 text-center">
           <p className="text-base text-gray-600 dark:text-gray-300">
             Still have questions?{" "}
