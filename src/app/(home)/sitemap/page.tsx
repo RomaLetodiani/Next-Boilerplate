@@ -53,6 +53,7 @@ const sections: SitemapSection[] = [
       ...authNavigationItems,
       { name: "Help Center", href: "/help", icon: <HelpCircle /> },
       { name: "Documentation", href: "/docs", icon: <HelpCircle /> },
+      { name: "FAQ", href: "/faq", icon: <HelpCircle /> },
     ],
   },
 ];

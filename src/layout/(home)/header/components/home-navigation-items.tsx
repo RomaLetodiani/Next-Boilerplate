@@ -26,6 +26,7 @@ export const companyNavigationItems: NavItem[] = [
   { name: "Blogs", href: "/blogs", icon: <Book /> },
   { name: "Contact", href: "/contact", icon: <User /> },
   { name: "Pricing", href: "/pricing", icon: <BarChart /> },
+  { name: "FAQ", href: "/faq", icon: <HelpCircle /> },
 ];
 
 export const productNavigationItems: NavItem[] = [
